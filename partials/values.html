@@ -1,0 +1,103 @@
+<div class="moveabl" id="sunray" style="border-radius: 50%; width: 15.7081%; height: 25.5835%; left: 41.5981%; top: 16.4722%; opacity: 1; background-color: rgba(255, 255, 0, 0.298039);">
+  <div class="moveabl" id="sun" style="border-radius: 50%; width: 80%; height: 80%; left: 9.75756%; top: 10.4468%; opacity: 1; background-color: rgb(255, 255, 0);"></div>  
+</div>
+
+<div class="moveabl" id="clouds" style="width: 100.227%; height: 60.168%;">
+  <div class="moveabl" style="left: 73.584%; top: 25.5829%; width: 5.9887%; height: 8.00353%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+
+  <div class="moveabl" style="width: 16.0805%; height: 12.7547%; left: -5.53849%; top: 33.2778%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+
+  <div class="moveabl" style="left: 83.637%; top: 47.5362%; width: 10.3955%; height: 11.2853%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+
+  <div class="moveabl" style="left: 22.8425%; top: 15.7328%; width: 9.51302%; height: 11.3208%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+</div>
+
+<div class="moveabl" id="city" style="left: -0.470696%; top: 45.9729%; width: 100.566%; height: 60.3302%;">
+  <img src="images/bg-city.svg" alt="City">
+</div>
+
+<div class="moveabl" id="building" style="left: 41.4443%; top: 7.52361%; width: 23%;">
+  <img src="images/btpn-building.svg" alt="Building">
+</div>
+
+<div id="border2" style="border-radius: 30px; width: 29.1867%; height: 10.3314%; left: 56.8159%; top: 29.9294%; background-color: rgb(239, 129, 35);" class="moveabl"></div>
+<div id="border3" style="border-radius: 30px; width: 14.8705%; height: 9.99222%; left: 55.4454%; top: 46.9723%; background-color: rgb(239, 129, 35);" class="moveabl"></div>
+<div id="border1" style="border-radius: 30px; width: 15.7252%; height: 9.99222%; left: 36.6269%; top: 37.3332%; background-color: rgb(239, 129, 35);" class="moveabl"></div>
+<div id="border4" style="border-radius: 30px; width: 21.4944%; height: 9.99222%; left: 26.489%; top: 53.4531%; background-color: rgb(239, 129, 35);" class="moveabl"></div>
+<div id="pointer2" class="moveabl" style="left: 58.0028%; top: 39.3127%; width: 3.52564%; height: 5.33808%;"><img src="images/pointer-left.svg" alt="pointer"></div>
+<div id="pointer3" class="moveabl" style="left: 57.7975%; top: 56.0971%; width: 3.4188%; height: 5.16014%;"><img src="images/pointer-left.svg" alt="pointer"></div>
+<div id="pointer4" class="moveabl" style="left: 39.5216%; top: 62.6501%; width: 3.20513%; height: 5.16014%;"><img src="images/pointer-right.svg" alt="pointer"></div>
+<div id="pointer1" class="moveabl" style="left: 47.3241%; top: 46.6442%; width: 3.09829%; height: 5.16014%;"><img src="images/pointer-right.svg" alt="pointer"></div>
+
+<div id="val1" class="moveabl" style="left: 40.4881%; top: 36.4379%;">
+  <h2 style="color:white;font-weight:normal">Sinergi</h2>
+</div>
+<div id="val2" class="moveabl" style="left: 59.9292%; top: 28.9591%;">
+  <h2 style="color:white;font-weight:normal">Mencapai yang terbaik</h2>
+</div>
+<div id="val4" class="moveabl" style="left: 28.7343%; top: 52.4244%;">
+  <h2 style="color:white;font-weight:normal">Dapat dipercaya</h2>
+</div>
+<div id="val3" class="moveabl" style="left: 59.4902%; top: 46.0159%;">
+  <h2 style="color:white;font-weight:normal">Peduli</h2>
+</div>
+
+<div id="staff-male" class="moveabl" style="left: 37.4516%; top: 67.3877%; width: 21.2034%; height: 41.4268%;">
+  <a href="#/speak-your-mind">
+  <img src="images/male-staff-hi.svg" alt="Male staff">
+  </a>
+</div>
+
+<div id="staff-female" class="moveabl" style="left: 53.3904%; top: 65.1246%; width: 11.8911%; height: 44.3392%; ">
+  <a href="#/speak-your-mind">
+    <img src="images/female-staff-hi.svg" alt="Female staff">
+    </a>
+</div>
+
+<div id="cursor" class="moveabl" style="width: 5.3125%; height: 9.68696%; left: 42.3899%; top: 77.6004%; opacity: 1;">
+  <a href="#/speak-your-mind">
+    <img src="images/handcursor.png" alt="click">
+  </a>
+</div>
+
+<!-- <div class="moveabl" style="left: 93.6442%; top: 92.8819%;">
+  <a id="nav-next">next</a>  
+</div> -->
+
+<script>
+  TweenLite.set('#staff-female', {scaleX:-1});
+
+  var tl = new TimelineMax();  
+  tl.from('#building', 1, {left:'18.0851%'} );  
+  tl.from('#staff-male, #staff-female', .5, {top:'100%'}, '-=0.5');
+
+  tl.to('#sunray', 2, {bezier:{ type:'thru', curviness:3, values:[
+    {left: '41.5981%', top: '16.4722%'},
+    {left: '83.1557%', top: '20.9006%'}
+    ]}}, '-=1');
+
+
+  tl.from('#border2, #pointer2', .5, {opacity:0, left: '50%'});
+  tl.from('#val2', .5, {opacity:0});
+  
+  tl.from('#border1, #pointer1', .5, {opacity:0, left: '50%'});
+  tl.from('#val1', .5, {opacity:0});
+
+
+  tl.from('#border3, #pointer3', .5, {opacity:0, left: '50%'});
+  tl.from('#val3', .5, {opacity:0});
+
+  tl.from('#border4, #pointer4', .5, {opacity:0, left: '50%'});
+  tl.from('#val4', .5, {opacity:0});
+
+  tl.from('#cursor', 1, {opacity:0, left:'30%', top:'30%'}, '+=3');
+
+</script>

@@ -1,0 +1,84 @@
+
+<div id="office" style="background:#F7EA92;width:100%;height:100%" class="moveabl">
+  <div class="moveabl" style="left: 3.46911%; top: 40.7318%; width: 50.5762%; height: 42.094%;"><img src="images/bg-office.svg" alt="office background"></div>
+  <div class="moveabl" style="left: 64.9997%; top: 41.1695%; width: 50.5762%; height: 42.094%;"><img src="images/bg-office.svg" alt="office background"></div>
+</div>
+<div id="kantor2" class="moveabl" style="width:50%;height:100%;left:50%;background-color:rgba(39, 170, 225, 0.75)">
+</div>
+
+<div class="moveabl" style="width: 50%; height: 10%; left: 13.3036%; top: 2.0252%;">
+  <h1>Benturan Kepentingan</h1>  
+</div>
+<div id="aturan1" class="moveabl" style="width: 34.5162%; height: 15.7864%; left: 13.1303%; top: 17.0753%;">
+  <p>Seluruh Karyawan wajib menghindari benturan kepentingan antara kepentingan pribadi Karyawan dengan kepentingan perusahaan.</p>
+</div>
+<div id="aturan2" class="moveabl" style="width: 43.8649%; height: 15.978%; left: 53.99%; top: 17.1766%;">
+  <p style="color:#fff">Karyawan tidak diperkenankan memiliki usaha atau bisnis pribadi di luar pekerjaannya sebagai Karyawan BTPN yang mengganggu dan mempengaruhi profesionalisme dan integritas Karyawan yang bersangkutan.</p>  
+</div>
+
+<div style="width:100%;height:100%" id="scenekantor1">
+  <div class="moveabl" style="width: 14.2004%; height: 35.1056%; left: 23.031%; top: 65.8549%;transform: matrix(-1, 0, 0, 1, 0, 0);">
+    <img src="images/chair.svg" alt="chair office 1">
+  </div>
+  <div class="moveabl" id="karyawan1" style="width: 15.5873%; height: 45.1264%; left: 20.4799%; top: 51.7814%;">
+    <img src="images/staff-sit2.svg" alt="Staff working at office 1">
+  </div>
+  <div class="moveabl" style="width: 36.7007%; height: 42.5815%; left: 3.67155%; top: 57.6045%;">
+    <img src="images/desk2.svg" alt="desk office 1">
+  </div>
+</div>
+
+<div style="width:100%;height:100%" id="scenekantor2">
+  <div class="moveabl" style="width: 14.2004%; height: 35.1056%; left: 79.031%; top: 65.8549%;transform: matrix(-1, 0, 0, 1, 0, 0);">
+    <img src="images/chair.svg" alt="chair office 2">
+  </div>
+  <div class="moveabl" id="karyawan2" style="width: 19.999%; height: 35.8089%; left: 70.8541%; top: 62.894%;">
+    <div class="moveabl" id="z2" style="width: 11.0691%; height: 11.9284%; left: 58.6431%; top: -1.64634%;">
+      <span style="color:#fff">Z</span>
+    </div>
+    <div class="moveabl" id="z1" style="width: 12.648%; height: 14.3674%; left: 51.8832%; top: 1.79878%;">
+      <span style="color:#fff">z</span>
+    </div>
+    <img src="images/staff-sit3.svg" alt="Staff sleeping at office 2">
+  </div>
+  <div class="moveabl" style="width: 36.7007%; height: 42.5815%; left: 50.732%; top: 57.6045%;">
+    <img src="images/desk2.svg" alt="desk office 2">
+  </div>
+</div>
+
+
+<div class="moveabl" id="btn-next" style="width: 5.4019%; height: 9.99335%; left: 92.5667%; top: 86.516%;">
+  <a href="#/kepatuhan-dan-manajemen-resiko" title="Selanjutnya">
+    <img src="images/arrow-right.svg" alt="Next" >    
+  </a>
+</div>
+
+<div id="cursor" class="moveabl" style="width: 5.3125%; height: 9.68696%; left: 90.9503%; top: 88.7932%; opacity: 1;">
+  <a href="#/kepatuhan-dan-manajemen-resiko">
+    <img src="images/handcursor.png" alt="click">
+  </a>
+</div>
+
+
+<script>
+  var tl = new TimelineMax(); 
+
+  tl.from("#scene1", 1, {left:"100%"});
+
+  tl.from('#aturan1', 1, {opacity:0, top:'50%'});
+  tl.from('#aturan2', 1, {opacity:0, top:'50%'}, "+=1");
+
+  tl.from('#scenekantor1', 1, {left:'-100%'});
+  tl.from('#scenekantor2', 1, {left:'200%'}, "-=1");
+
+  tl.from('#btn-next', 1, {scale:0, ease:Bounce.easeOut});
+  tl.from('#cursor', 1, {opacity:0, left:'30%', top:'30%'}, '+=2');
+
+  var sleeptl = new TimelineMax({repeat:-1});
+  sleeptl.from('#z1', .5, {opacity:0}, "2");
+  sleeptl.from('#z2', .5, {opacity:0});
+
+
+
+
+</script>

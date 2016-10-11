@@ -1,0 +1,82 @@
+<div class="moveabl" id="sunray" style="border-radius: 50%; width: 15.7081%; height: 25.5835%; left: 83.1557%; top: -12.0994%; opacity: 1; background-color: rgba(255, 255, 0, 0.3);">
+  <div class="moveabl" id="sun" style="border-radius: 50%; width: 80%; height: 80%; left: 9.75756%; top: 10.4468%; opacity: 1; background-color: rgb(255, 255, 0);"></div>  
+</div>
+
+<div class="moveabl" id="clouds" style="width: 100.227%; height: 60.168%; top:-16.6648%">
+  <div class="moveabl" style="left: 73.584%; top: 25.5829%; width: 5.9887%; height: 8.00353%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+
+  <div class="moveabl" style="width: 16.0805%; height: 12.7547%; left: -5.53849%; top: 33.2778%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+
+  <div class="moveabl" style="left: 83.637%; top: 47.5362%; width: 10.3955%; height: 11.2853%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+
+  <div class="moveabl" style="left: 22.8425%; top: 15.7328%; width: 9.51302%; height: 11.3208%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+</div>
+
+
+<div class="moveabl" id="city" style="left: -0.470696%; top: 22.9729%; width: 100.566%; height: 60.3302%;">
+  <img src="images/bg-city.svg" alt="City">
+</div>
+
+
+<div class="moveabl" id="building" style="left: -33.0851%; top: -13.47639%;width:23%">
+  <img src="images/btpn-building.svg" alt="Building">
+</div>
+
+<div id="bus-station" class="moveabl" style="width: 51.1933%; height: 48.8848%; left: -16.6912%; top: 31.688%;"><img src="images/bus-station.svg" alt="bus station"></div>
+
+<div id="road" class="moveabl" style="width:100%;height:20%;top:80.2797%;background-color:#738699"></div>
+<div id="shadow1" class="moveabl" style="width: 15.4889%;height: 5.56349%;left: 39.2396%;top: 85.4218%;background-color: rgb(88, 104, 117);border-radius: 50%;"></div>
+<div id="shadow2" class="moveabl" style="width: 13.2216%;height: 5.79026%;left: 28.5717%;top: 85.223%;background-color: rgb(88, 104, 117);border-radius: 50%;"></div>
+<div id="staff-male" class="moveabl" style="left: 34.4403%; top: 45.8406%; width: 21.3231%; height: 42.1471%;"><img src="images/male-staff-walk.svg" alt="Male staff walking"></div>
+<div id="staff-female" class="moveabl" style="left: 28.1796%; top: 43.7655%; width: 14.8587%; height: 44.9118%;"><img src="images/female-staff-walk.svg" alt="Female staff walking"></div>
+
+<div id="border1" style="border-radius: 30px; width: 32.764%; height: 64.516%; left: 60.2588%; top: 24.5434%; background-color: rgb(239, 129, 35);" class="moveabl"></div>
+
+<div id="title" class="moveabl" style="left: 64.9776%; top: 26.9085%;">
+    <h1 style="color:#fff;">Speak Your Mind</h1>
+  </a>
+</div>
+
+<div id="text1" class="moveabl" style="left: 64.0178%; top: 38.1803%; width: 26.1915%; height: 47.1049%;">
+  <p style="color:#fff;">BTPN menyediakan media <strong>’Speak Your Mind’</strong>, sebagai saluran pelaporan dan penyampaian aspirasi yang aman dan terjamin kerahasiaannya. </p>
+</div>
+<div id="text2" class="moveabl" style="left: 64.0178%; top: 59.0271%; width: 24.6401%; height: 26.1835%;">
+  <a href="#/misconduct" style="text-decoration:none">
+  <p style="color:#fff;">Melalui Speak Your Mind, karyawan dapat mengungkapkan permasalahan yang berkaitan dengan perilaku yang tidak baik (misconduct) dan/atau kejadian fraud, aspirasi dan/atau ide perbaikan.</p>
+  </a>
+</div>
+
+<div id="cursor" class="moveabl" style="width: 5.3125%; height: 9.68696%; left: 67.993%; top: 73.2791%; opacity: 1;">
+  <a href="#/misconduct">
+    <img src="images/handcursor.png" alt="click">
+  </a>
+</div>
+
+<script>
+  var tl = new TimelineMax(); 
+  tl.from('#building', .5, {top:'7.52361%'}, 'road');
+  tl.from('#road', .5, {top:'100%'}, 'road');
+  tl.from('#city', .7, {top:'45.9729%'}, 'road');
+  tl.from('#clouds', 1, {top:'0%'}, 'road');
+  tl.from('#sunray', 1.2, {top:'16.4722%'}, 'road');
+
+  tl.from('#staff-male, #shadow1', 2, {left:'-30%'}, 'walking');
+  tl.from('#staff-female, #shadow2', 2, {left:'-40%'}, 'walking');
+  tl.from('#building', 1, {left:'41.4443%'}, 'walking');
+  tl.from('#bus-station', 2, {left:'100%'}, 'walking');
+
+  tl.from('#border1', .5, {opacity:0, left:'100%'});
+  tl.from('#title', .5, {opacity:0});
+  tl.from('#text1', .5, {opacity:0}, '+=.5');
+  tl.from('#text2', .5, {opacity:0}, '+=2');
+  tl.from('#cursor', 1, {opacity:0, left:'30%', top:'30%'}, '+=3');
+
+</script>

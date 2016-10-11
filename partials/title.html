@@ -1,0 +1,55 @@
+<div class="moveabl" id="clouds" style="width: 100.227%; height: 60.168%;">
+  <div class="moveabl" style="left: 73.584%; top: 25.5829%; width: 5.9887%; height: 8.00353%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+
+  <div class="moveabl" style="width: 16.0805%; height: 12.7547%; left: -5.53849%; top: 33.2778%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+
+  <div class="moveabl" style="left: 83.637%; top: 47.5362%; width: 10.3955%; height: 11.2853%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+
+  <div class="moveabl" style="left: 22.8425%; top: 15.7328%; width: 9.51302%; height: 11.3208%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+</div>
+
+<div class="moveabl" id="city" style="left: -0.470696%; top: 45.9729%; width: 100.566%; height: 60.3302%;">
+  <img src="images/bg-city.svg" alt="City">
+</div>
+
+<div id="title" class="moveabl" style="left: 38.1859%; top: 7.60091%; width: 29.7477%; height: 12.7224%;">
+  <h1 style="text-align:center">Definisi Kode Etik</h1>
+</div>
+
+<div class="moveabl" id="building" style="left: 41.4443%; top: 36.5271%;width:23%">
+  <a href="#/learning-objectives">
+    <img src="images/btpn-building.svg" alt="Building">
+  </a>
+</div>
+
+<div id="cursor" class="moveabl" style="width: 5.3125%; height: 9.68696%; left: 46.0319%; top: 48.7847%;">
+  <a href="#/learning-objectives">
+    <img src="images/handcursor.png" alt="click">
+  </a>
+</div>
+
+<!-- <div class="moveabl" style="left: 93.6442%; top: 92.8819%;">
+  <a id="nav-next">next</a>  
+</div> -->
+
+<script>
+  var tl = new TimelineMax();
+  tl.from('#clouds', 1, {opacity:0});
+  tl.from('#clouds', 1, {top:'30%'});  
+  tl.from('#building', 1, {top:'100%'}, '-=1');
+  tl.from('#city', 2, {top:'100%'}, '-=1');
+  tl.from('#title', .5, {opacity:0, top:'30%'});
+  tl.from('#cursor', 1, {opacity:0, left:'30%', top:'60%'});
+
+  // tl = new TimelineMax({repeat:-1, delay:2});
+  // tl.to('#clouds2', 20, {left:'0%', ease:Linear.easeNone})
+  // tl.to('#clouds', 20, {left:'-100%', ease:Linear.easeNone},'-=20')
+</script>

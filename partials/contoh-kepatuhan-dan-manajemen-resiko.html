@@ -1,0 +1,73 @@
+
+<div id="office" style="background:#F7EA92;width:100%;height:100%" class="moveabl">
+  <div class="moveabl" style="left: 3.46911%; top: 40.7318%; width: 50.5762%; height: 42.094%;"><img src="images/bg-office.svg" alt="office background"></div>
+</div>
+<div class="moveabl" style="width: 50%; height: 10%; left: 13.3036%; top: 2.0252%;">
+  <h1>Kepatuhan &amp; Manajemen Resiko</h1>  
+</div>
+
+<div id="scene" style="width:100%; height:100%">
+  
+  <div id="lemari" class="moveabl" style="width: 25.9638%; height: 68.9029%; left: 74.2788%; top: 32.2669%;">
+    <img src="images/bookshelf.svg" alt="bookshelf">
+  </div>
+
+  <div id="pertanyaan" class="moveabl" style="width: 40.0725%; height: 30.317%; background: rgb(239, 129, 35); border-radius: 30px; left: 3.567%; top: 18.9372%; padding: 2%;">
+    <p style="color:#fff">Saya telah bekerja di front liner cukup lama dan mendapat pertanyaan dari nasabah terkait intepretasi peraturan Bank Indonesia. Apakah saya diperbolehkan menjelaskan peraturan tersebut sesuai dengan pengetahuan dan pengalaman saya?</p>
+  </div>
+
+  <div id="jawaban" class="moveabl" style="width: 36.7246%; height: 23.1114%; background: rgb(125, 106, 86); border-radius: 30px; left: 50.3044%; top: 25.4939%; padding: 2%;">
+    <p style="color:#fff"><strong><u>Tidak diperbolehkan</u></strong> karena bisa menimbulkan penafsiran yang salah atas peraturan tersebut, sebaiknya Anda meminta penjelasan dari Divisi Kepatuhan.</p>
+  </div>
+
+
+  <div id="kursi1" class="moveabl" style="width: 16.5264%; height: 40.5411%; left: 13.2483%; top: 60.4823%;">
+    <img src="images/chair.svg" alt="chair 1">
+  </div>
+
+  <div id="kursi2" class="moveabl" style="width: 16.6466%; height: 41.0189%; left: 50.2733%; top: 60.3629%; transform: matrix(-1, 0, 0, 1, 0, 0);">
+    <img src="images/chair.svg" alt="chair 2">
+  </div>
+
+  <div id="staff" class="moveabl" style="width: 16.8962%; height: 50.4189%; left: 14.8341%; top: 45.7935%;">
+    <img src="images/staff-sit1.svg" alt="staff asking question">
+  </div>
+
+  <div id="coach" class="moveabl" style="width: 17.6624%; height: 48.0552%; left: 47.7454%; top: 46.4779%;">
+    <img src="images/coach-sit.svg" alt="coach answering">
+  </div>
+
+  <div id="desk" class="moveabl" style="width: 37.2732%; height: 49.6965%; left: 20.7661%; top: 53.054%;">
+    <img src="images/desk1.svg" alt="desk">
+  </div>
+</div>
+
+
+<div class="moveabl" id="btn-next" style="width: 5.4019%; height: 9.99335%; left: 92.5667%; top: 86.516%;">
+  <a href="#/benturan-kepentingan" title="Selanjutnya">
+    <img src="images/arrow-right.svg" alt="Next" >    
+  </a>
+</div>
+
+<div id="cursor" class="moveabl" style="width: 5.3125%; height: 9.68696%; left: 90.9503%; top: 88.7932%; opacity: 1;">
+  <a href="#/benturan-kepentingan">
+    <img src="images/handcursor.png" alt="click">
+  </a>
+</div>
+
+
+<script>
+  var tl = new TimelineMax(); 
+
+  tl.from("#scene", 1, {left:"100%"});
+
+  tl.from('#pertanyaan', 1, {opacity:0, top:'50%'});
+  tl.from('#jawaban', 1, {opacity:0, top:'50%'}, "+=3");
+
+
+  tl.from('#btn-next', 1, {scale:0, ease:Bounce.easeOut});
+  tl.from('#cursor', 1, {opacity:0, left:'30%', top:'30%'}, '+=2');
+
+
+
+</script>

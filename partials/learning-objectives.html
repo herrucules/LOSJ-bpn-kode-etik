@@ -1,0 +1,61 @@
+<div class="moveabl" id="clouds" style="width: 100.227%; height: 60.168%;">
+  <div class="moveabl" style="left: 73.584%; top: 25.5829%; width: 5.9887%; height: 8.00353%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+
+  <div class="moveabl" style="width: 16.0805%; height: 12.7547%; left: -5.53849%; top: 33.2778%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+
+  <div class="moveabl" style="left: 83.637%; top: 47.5362%; width: 10.3955%; height: 11.2853%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+
+  <div class="moveabl" style="left: 22.8425%; top: 15.7328%; width: 9.51302%; height: 11.3208%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+</div>
+
+<div class="moveabl" id="city" style="left: -0.470696%; top: 45.9729%; width: 100.566%; height: 60.3302%;">
+  <img src="images/bg-city.svg" alt="City">
+</div>
+
+<div class="moveabl" id="border" style="border-radius: 30px; width: 49.8052%; height: 26.1872%; left: 35.9237%; top: 38.3867%; background-color: #EF8123;"></div>
+
+<div class="moveabl" id="sunray" style="border-radius: 50%; width: 15.7081%; height: 25.5835%; left: -41.5981%; top: 100.4722%; opacity: 1; background-color: rgba(255, 255, 0, 0.3);">
+  <a href="#/principals">
+    <div class="moveabl" id="sun" style="border-radius: 50%; width: 80%; height: 80%; left: 9.75756%; top: 10.4468%; opacity: 1; background-color: rgb(255, 255, 0);"></div>  
+  </a>
+</div>
+
+<div class="moveabl" id="building" style="left: 18.0851%; top: 7.52361%;width:23%">
+  <img src="images/btpn-building.svg" alt="Building">
+</div>
+
+<div id="title" class="moveabl" style="left: 43.0182%; top: 42.3128%; color:white;">
+  <h1>Tujuan mempelajari kode etik:</h1>
+  <p>untuk mencapai kinerja unggul berkelanjutan</p>
+</div>
+
+<div id="cursor" class="moveabl" style="width: 5.3125%; height: 9.68696%; left: 45.4965%; top: 27.9046%;">
+  <a href="#/principals">
+    <img src="images/handcursor.png" alt="click">
+  </a>
+</div>
+
+<!-- <div class="moveabl" style="left: 93.6442%; top: 92.8819%;">
+  <a id="nav-next">next</a>  
+</div> -->
+
+<script>
+  var tl = new TimelineMax();  
+  tl.from('#building', .5, {top:'36.5271%'});
+  tl.from('#building', .5, {left:'41.4443%'});
+  tl.from('#border', .5, {left:'13%', opacity:0});  
+  tl.from('#title', .5, {opacity:0});
+    tl.to('#sunray', 2, {bezier:{ type:'thru', curviness:3, values:[
+    {left:'-15%', top:'50%'}, 
+    {left: '41.5981%', top: '16.4722%'}
+    ]}});
+  tl.from('#cursor', 1, {opacity:0, left:'30%', top:'60%'}, '+=1');
+</script>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kode Etik BTPN</title>  
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700' rel='stylesheet' type='text/css'> -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <script src="https://code.createjs.com/soundjs-0.6.2.min.js"></script> -->
+  <script src="js/libs/preloadjs-0.6.2.min.js"></script>
+  <script src="js/libs/interact.min.js"></script>
+  <script src="js/libs/jquery.min.js"></script>
+  <script src="js/libs/screenfull.min.js"></script>
+  <script src="js/libs/TabWindowVisibilityManager.min.js"></script>
+  <script src="js/libs/TweenMax.min.js"></script>
+  <script src="js/libs/sammy0.7.6.min.js"></script>
+  <script src="js/libs/flowtype.js"></script>
+</head>
+<body>
+  <div >
+    <div id="interactive-container" style="margin:0 auto">
+      <div id="logo" class="moveabl" style="width: 9.32722%; height: 9.25118%; z-index: 1; left: 1.91995%; top: 3.24882%;">
+        <a href="#/"><img src="images/btpn-logo.svg" alt="BTPN"></a>
+      </div>
+      <div id="preloader" style="z-index: 1; left: 43.8311%; top: 41.763%; width: 8.25103%; height: 16.56%;" class="moveabl">
+        <img src="images/loading-ring-alt.svg" alt="Loading..">
+      </div>
+      <div id="content"></div>
+    </div>
+  </div>
+
+  <script>
+  var appRoutes = [ 
+                  {id:'1', name:'title', url:'/', templateUrl:'partials/title.html'},
+                  {id:'2', name:'learning-objectives', url:'/learning-objectives', templateUrl:'partials/learning-objectives.html', tracked: 10},
+                  {id:'3', name:'principals', url:'/principals', templateUrl:'partials/principals.html', tracked: 10},
+                  {id:'4', name:'values', url:'/values', templateUrl:'partials/values.html', tracked: 10},
+                  {id:'5', name:'speak-your-mind', url:'/speak-your-mind', templateUrl:'partials/speak-your-mind.html', tracked: 10},
+                  {id:'6', name:'misconduct', url:'/misconduct', templateUrl:'partials/misconduct.html', tracked: 10},
+                  {id:'7', name:'misconduct', url:'/misconduct', templateUrl:'partials/misconduct.html', tracked: 10},
+                  {id:'8', name:'contoh-kepatuhan-dan-manajemen-resiko', url:'/contoh-kepatuhan-dan-manajemen-resiko', templateUrl:'partials/contoh-kepatuhan-dan-manajemen-resiko.html', tracked: 10},
+                  {id:'9', name:'benturan-kepentingan', url:'/benturan-kepentingan', templateUrl:'partials/benturan-kepentingan.html', tracked: 10}
+                 ];
+
+
+  var quizGroup = [
+  // {"groupName":"default","maxTry":0,"quizes":[
+  //   {"quizID":"q1","page":"1"},
+  //   {"quizID":"q2","page":"2"},
+  //   {"quizID":"q3","page":"3"},
+  //   {"quizID":"q4","page":"4"},
+  //   {"quizID":"q5","page":"5"}
+  //   ]}
+  ];
+
+  var manifestToLoad = [
+    // {id: 'char-bartender', src: 'images/bartender.svg'},
+    // {id: 'char-mulut-bartender', src: 'images/bicara-bartender.svg'},
+    // {id: 'char-tangan-bartender', src: 'images/tanganBartender.svg'},
+    // {id:'bar', src:'images/bar.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'building', src:'images/btpn-building.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'city', src:'images/bg-city.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'cloud', src:'images/cloud.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'male-staff-hi', src:'images/male-staff-hi.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'female-staff-hi', src:'images/female-staff-hi.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'male-staff-walk', src:'images/male-staff-walk.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'female-staff-walk', src:'images/female-staff-walk.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'bg-office', src:'images/bg-office.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'male-staff-shock', src:'images/male-staff-shock.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'female-staff-shock', src:'images/female-staff-shock.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'female-sad', src:'images/female-sad.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'male-siluet', src:'images/male-siluet.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'laptop', src:'images/laptop.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'mouse', src:'images/mouse.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'btpn-logo-white', src:'images/btpn-logo-white.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'mouse-pointer', src:'images/mouse-pointer.svg', type: createjs.LoadQueue.IMAGE},
+    // {id:'selectcocktail', src:'images/select-cocktail.svg', type: createjs.LoadQueue.IMAGE},
+    // {id:'glass', src:'images/glass.svg', type: createjs.LoadQueue.IMAGE},
+    // {id:'img1', src:'images/black-russian.png'},
+    // {id:'img2', src:'images/vodka.png'},
+    // {id:'img3', src:'images/gin-and-tonic.png'},
+    // {id:'img4', src:'images/mojito.png'},
+    // {id:'img5', src:'images/martini.png'},    
+    // {id:'img6', src:'images/old fashioned glass.jpg'},
+    // {id:'img7', src:'images/background.png'}
+  ];
+
+
+  </script>
+
+  <script src="js/libs/snap.svg-min.js"></script>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<div class="moveabl" id="clouds" style="width: 100.227%; height: 60.168%;">
+  <div class="moveabl" style="left: 73.584%; top: 25.5829%; width: 5.9887%; height: 8.00353%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+
+  <div class="moveabl" style="width: 16.0805%; height: 12.7547%; left: -5.53849%; top: 33.2778%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+
+  <div class="moveabl" style="left: 83.637%; top: 47.5362%; width: 10.3955%; height: 11.2853%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+
+  <div class="moveabl" style="left: 22.8425%; top: 15.7328%; width: 9.51302%; height: 11.3208%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+</div>
+
+
+<div class="moveabl" id="city" style="left: -0.470696%; top: 45.9729%; width: 100.566%; height: 60.3302%;">
+  <img src="images/bg-city.svg" alt="City">
+</div>
+
+<div class="moveabl" id="border" style="border-radius: 30px; width: 42.8255%; height: 35.2132%; left: 48.7354%; top: 35.0857%; opacity: 1; background-color: #EF8123;"></div>
+
+<div class="moveabl" id="sunray" style="border-radius: 50%; width: 15.7081%; height: 25.5835%; left: 41.5981%; top: 16.4722%; opacity: 1; background-color: rgba(255, 255, 0, 0.3);">
+  <a href="#/values">    
+  <div class="moveabl" id="sun" style="border-radius: 50%; width: 80%; height: 80%; left: 9.75756%; top: 10.4468%; opacity: 1; background-color: rgb(255, 255, 0);"></div>  
+  </a>
+</div>
+
+<div class="moveabl" id="building" style="left: 18.0851%; top: 7.52361%;width:23%">
+  <img src="images/btpn-building.svg" alt="Building">
+</div>
+
+<div id="title" class="moveabl" style="left: 52.9905%; top: 39.3954%; color: white; opacity: 1; width: 36.2207%; height: 24.1672%;">
+  <h1>Prinsip-prinsip moral</h1>
+  <p>yaitu nilai-nilai mengenai hal-hal yang dianggap baik dan tidak baik dan hal-hal yang dianggap benar dan tidak benar.</p>
+</div>
+
+<div id="cursor" class="moveabl" style="width: 5.3125%; height: 9.68696%; left: 45.4965%; top: 27.9046%;">
+  <a href="#/values">
+    <img src="images/handcursor.png" alt="click">
+  </a>
+</div>
+
+<script>
+  var tl = new TimelineMax();  
+
+  tl.from('#border', .5, {left:'13%', opacity:0}, '-=1');
+  tl.from('#title', .5, {opacity:0});
+  tl.from('#cursor', 1, {opacity:0, left:'30%', top:'60%'}, '+=3');
+</script>
