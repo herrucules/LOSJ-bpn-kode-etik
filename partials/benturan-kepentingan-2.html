@@ -1,0 +1,84 @@
+
+<div id="office" style="background:#F7EA92;width:100%;height:100%" class="moveabl">
+
+</div>
+
+<div class="moveabl" style="width: 50%; height: 10%; left: 13.3036%; top: 2.0252%;">
+  <h1>Benturan Kepentingan</h1>  
+</div>
+
+<div class="moveabl" id="papan" style="width: 45.1878%; height: 47.6822%; background: rgb(255, 255, 255); left: 27.7295%; top: 16.9631%; border:10px solid #424242">
+  <p style="text-align:center;padding-top:30%">TENDER PENGADAAN BARANG</p>
+</div>
+<div class="moveabl" style="width: 45.1878%; height: 5%; background: #C0B8A7; left: 27.7295%; top: 16.9631%;"></div>
+
+<div class="moveabl" id="staff1" style="width: 17.9819%; height: 52.4163%; left: 68.1493%; top: 31.904%;">
+  <img src="images/staff-present.svg" alt="Staff Presentasi">
+</div>
+<div class="moveabl" style="width: 54.2214%; height: 21.2265%; left: 22.2656%; top: 78.883%;">
+  <img src="images/desk3.svg" alt="Meja">
+</div>
+
+<div class="moveabl" id="btn-pertanyaan" style="cursor:pointer; width: 5.4019%; height: 8.99335%; left: 16.7148%; top: 48.9082%; border-radius: 50%; background: rgb(239, 129, 35); text-align: center; padding-top: 1.3%;">
+  <span title="Pertanyaan" style="color:#fff;text-decoration:none">
+    ?
+  </span>
+</div>
+
+<div id="pertanyaan" class="moveabl" style="width: 30.7231%; height: 18.0768%; background: rgb(239, 129, 35); border-radius: 30px; left: 5.35222%; top: 48.3782%; padding: 2%;">
+<p style="color:#fff">Apakah perusahaan milik keluarga saya dapat ikut serta dalam tender pengadaan barang/ jasa di BTPN?</p>
+</div>
+
+<div id="jawaban" class="moveabl" style="width: 39.3497%; height: 24.9726%; background: rgb(125, 106, 86); border-radius: 30px; left: 58.9072%; top: 38.0011%; padding: 2%;">
+  <p style="color:#fff">Hal ini dimungkinkan apabila Anda tidak dalam posisi untuk mengambil keputusan, <strong><u>tetapi wajib dihindari apabila Anda ikut dalam pengambilan keputusan</u></strong> karena  berpotensi menimbulkan benturan kepentingan</p>
+</div>
+
+<div class="moveabl" id="staff2" style="width: 15.1457%; height: 53.976%; left: 13.5504%; top: 63.8764%;">
+  <img src="images/staff-sit4.svg" alt="Staff duduk">
+</div>
+<div class="moveabl" id="staff3" style="width: 16.7197%; height: 56.9697%; left: 43.6433%; top: 71.6068%;">
+  <img src="images/staff-sit4.svg" alt="Staff duduk">
+</div>
+<div class="moveabl" style="width: 5.90205%; height: 7.90007%; left: 31.2845%; top: 87.0157%;">
+  <img src="images/glass.svg" alt="gelas">
+</div>
+<div class="moveabl" id="coach" style="width: 22.9156%; height: 62.0649%; left: 68.32%; top: 60.486%;">
+  <img src="images/coach-sit.svg" alt="Coach menjawab">
+</div>
+
+<div class="moveabl" id="btn-next" style="width: 5.4019%; height: 9.99335%; left: 92.5667%; top: 86.516%;">
+  <a href="#/menciptakan-lingkungan-kerja-kondusif" title="Selanjutnya">
+    <img src="images/arrow-right.svg" alt="Next" >    
+  </a>
+</div>
+
+<div id="cursor" class="moveabl" style="width: 5.3125%; height: 9.68696%; left: 90.9503%; top: 88.7932%; opacity: 1;">
+  <a href="#/menciptakan-lingkungan-kerja-kondusif">
+    <img src="images/handcursor.png" alt="click">
+  </a>
+</div>
+
+
+<script>
+  var tl = new TimelineMax(); 
+
+  tl.set("#pertanyaan, #jawaban, #coach, #btn-next, #cursor", {display:'none'});  
+
+  tl.from('#papan p', 1, {opacity:0}, "papan");
+  tl.from('#staff1', 1, {left:'100%'}, "papan");
+  tl.from('#staff3', 1, {top:'100%'}, "papan");
+  tl.from('#staff2', 1, {top:'100%'}, "papan");
+  tl.from('#btn-pertanyaan', 1, {opacity:0, top:'60%'}, '+=1');
+
+  $('#btn-pertanyaan').click(function() {    
+    var tl = new TimelineMax();
+    tl.set("#pertanyaan, #jawaban, #coach, #btn-next, #cursor", {display:'block'});
+    tl.from('#pertanyaan', .5, {opacity:0, top:'60%'});
+    tl.from('#coach', .5, {left:'100%'}, '+=3');
+    tl.to('#staff1, #papan', .5, {opacity:0.5});
+    tl.from('#jawaban', .5, {opacity:0, top:'60%'});
+    tl.from('#btn-next', 1, {scale:0, ease:Bounce.easeOut}, '+=3');
+    tl.from('#cursor', 1, {opacity:0, left:'30%', top:'30%'}, '+=2');
+  });
+
+</script>

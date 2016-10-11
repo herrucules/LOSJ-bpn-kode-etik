@@ -1,0 +1,46 @@
+
+<div id="office" style="background:#F7EA92;width:100%;height:100%" class="moveabl">
+  <div class="moveabl" style="left: 3.46911%; top: 40.7318%; width: 50.5762%; height: 42.094%;"><img src="images/bg-office.svg" alt="office background"></div>
+</div>
+<div class="moveabl" style="width: 80%; height: 10%; left: 13.3036%; top: 2.0252%;">
+  <h1>Kepatuhan &amp; Manajemen Resiko</h1>    
+</div>
+<div class="moveabl" style="width: 67.4993%; height: 12.853%; left: 13.296%; top: 14.2595%;">
+<p>Karyawan wajib mematuhi Peraturan Internal BTPN, Peraturan Bank Indonesia, dan peraturan perundang-undangan lainnya yang berlaku. Karyawan juga harus menyadari dan mengelola risiko di area yang menjadi tanggung jawabnya (risk  awareness). </p>
+</div>
+
+<div class="moveabl" id="aturan-bi" style="width: 23.4441%; height: 37.8475%; left: 7.34309%; top: 34.0384%;">
+  <img src="images/icon-bi.png" alt="Peraturan Bank Indonesia" title="Peraturan Bank Indonesia">
+</div>
+<div class="moveabl" id="aturan-btpn" style="width: 23.4441%; height: 37.8475%; left: 38.4388%; top: 34.0384%;">
+  <img src="images/icon-btpn.png" alt="Peraturan Internal BTPN" title="Peraturan Internal BTPN">
+</div>
+<div class="moveabl" id="aturan-dpr" style="width: 23.4441%; height: 37.8475%; left: 69.5017%; top: 34.0384%;">
+  <img src="images/icon-dpr.png" alt="Peraturan Perundang-undangan" title="Peraturan Perundang-undangan">
+</div>
+
+<div class="moveabl" id="btn-next" style="width: 5.4019%;height: 8.99335%;left: 92.5667%;top: 86.516%;border-radius:50%;background:#EF8123;text-align: center;padding-top: 1.3%;">
+  <a href="#/contoh-kepatuhan-dan-manajemen-resiko" title="Selanjutnya" style="color:#fff;text-decoration:none">
+    ?
+  </a>
+</div>
+
+<div id="cursor" class="moveabl" style="width: 5.3125%; height: 9.68696%; left: 90.9503%; top: 88.7932%; opacity: 1;">
+  <a href="#/contoh-kepatuhan-dan-manajemen-resiko">
+    <img src="images/handcursor.png" alt="click">
+  </a>
+</div>
+
+
+<script>
+  var tl = new TimelineMax(); 
+
+  tl.staggerFrom('#aturan-bi, #aturan-btpn, #aturan-dpr', 1, {opacity:0, top:'60%'}, .5);
+
+
+  tl.from('#btn-next', 1, {scale:0, ease:Bounce.easeOut});
+  tl.from('#cursor', 1, {opacity:0, left:'30%', top:'30%'}, '+=2');
+
+
+
+</script>
