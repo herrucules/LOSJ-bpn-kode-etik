@@ -1,0 +1,64 @@
+<div style="background:#F7EA92;width:100%;height:100%"></div>
+
+<div class="moveabl" style="width: 80%; height: 10%; left: 13.3036%; top: 2.0252%;">
+  <h1>Menciptakan Lingkungan Kerja yang Kondusif</h1>    
+</div>
+
+<div id="border1" style="border-radius: 30px; width: 78.794%; height: 25.6217%; left: 11.0752%; top: 13.2039%; background-color: rgb(239, 129, 35); opacity: 1;" class="moveabl"></div>
+
+<div id="text1" class="moveabl" style="left: 13.2528%; top: 12.0757%; width: 74.0721%; height: 27.9528%; opacity: 1;">
+  <h3 style="color:#fff">Keamanan di Tempat Kerja</h3>
+  <p style="color:#fff;">
+BTPN mengutamakan keamanan dan keselamatan di lingkungan kerja, yang harus didukung oleh seluruh karyawan dengan menjaga kesehatan, keselamatan dan keamanan agar terhindar dari risiko di lingkungan kerja. 
+
+ </p>
+</div>
+<div id="pertanyaan" class="moveabl" style="left: 28.1068%; top: 53.2979%; width: 22.8427%; height: 18.0674%; opacity: 1; background: rgb(239, 129, 35); border-radius: 30px; padding: 2%;">
+ <p style="color:#fff">
+    Bolehkah saya ijin tidak masuk kerja ketika saya merasa tubuh saya sakit?
+ </p>
+</div>
+
+<div id="jawaban" class="moveabl" style="left: 59.8825%; top: 46.7112%; width: 22.2261%; height: 32.3513%; opacity: 1; background: rgb(125, 106, 86); border-radius: 30px; padding: 2%;">
+ <p style="color:#fff">
+   Anda di wajibkan untuk ijin tidak masuk kerja kepada atasan anda dengan memberikan alasan dan bukti yang sah saat anda kembali masuk kerja.
+ </p>
+</div> 
+
+
+<div class="moveabl" id="bed" style="width: 42.7776%; height: 28.4282%; left: 9.73315%; top: 72.2339%;">
+  <img src="images/bed.svg" alt="Ranjang">
+</div>
+
+<div class="moveabl" id="sakit" style="width: 21.2812%; height: 31.5965%; left: 20.3032%; top: 57.6949%;">
+  <img src="images/staff-sick.svg" alt="Karyawan sakit">
+</div>
+
+<div class="moveabl" id="coach" style="width: 17.8535%; height: 53.3696%; left: 76.0536%; top: 47.3467%;z-index:1">
+  <img src="images/coach.svg" alt="Coach menjawab">
+</div>
+
+
+<!-- <div id="cursor" class="moveabl" style="width: 5.3125%; height: 9.68696%; left: 67.993%; top: 73.2791%; opacity: 1;">
+  <a href="#/misconduct">
+    <img src="images/handcursor.png" alt="click">
+  </a>
+</div> -->
+
+<script>
+  var tl = new TimelineMax(); 
+  
+
+  tl.from('#border1', .5, {opacity:0, left:'-50%'});
+  tl.from('#title', .5, {opacity:0});
+  tl.from('#text1', .5, {opacity:0});
+
+  tl.from('#sakit', 1, {top:'-30%', ease:Bounce.easeOut});
+  tl.from('#pertanyaan', .5, {left:'10%',opacity:0});
+
+  tl.from('#coach', .5, {left:'100%'}, "+=2");
+  tl.from('#jawaban', .5, {opacity:0, top:'50%'});
+
+  // tl.from('#cursor', 1, {opacity:0, left:'30%', top:'30%'}, '+=3');
+
+</script>

@@ -1,11 +1,42 @@
+<div class="moveabl" id="sunray" style="border-radius: 50%; width: 15.7081%; height: 25.5835%; left: 83.1557%; top: -12.0994%; opacity: 1; background-color: rgba(255, 255, 0, 0.3);">
+  <div class="moveabl" id="sun" style="border-radius: 50%; width: 80%; height: 80%; left: 9.75756%; top: 10.4468%; opacity: 1; background-color: rgb(255, 255, 0);"></div>  
+</div>
+
+<div class="moveabl" id="clouds" style="width: 100.227%; height: 60.168%; top:-16.6648%">
+  <div class="moveabl" style="left: 73.584%; top: 25.5829%; width: 5.9887%; height: 8.00353%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+
+  <div class="moveabl" style="width: 16.0805%; height: 12.7547%; left: -5.53849%; top: 33.2778%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+
+  <div class="moveabl" style="left: 83.637%; top: 47.5362%; width: 10.3955%; height: 11.2853%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+
+  <div class="moveabl" style="left: 22.8425%; top: 15.7328%; width: 9.51302%; height: 11.3208%;">
+    <img src="images/cloud.svg" alt="cloud">
+  </div>
+</div>
+
+
+<div class="moveabl" id="city" style="left: -0.470696%; top: 22.9729%; width: 100.566%; height: 60.3302%;">
+  <img src="images/bg-city.svg" alt="City">
+</div>
+
+
+<div class="moveabl" id="building" style="left: 41.4443%; top: 7.52361%; width: 23%;">
+  <img src="images/btpn-building.svg" alt="Building">
+</div>
 
 <div id="office" style="background:#F7EA92;width:100%;height:100%" class="moveabl">
   <div class="moveabl" style="left: 3.46911%; top: 40.7318%; width: 50.5762%; height: 42.094%;"><img src="images/bg-office.svg" alt="office background"></div>
 </div>
-<div class="moveabl" style="width: 80%; height: 10%; left: 13.3036%; top: 2.0252%;">
+<div class="moveabl" id="title" style="width: 80%; height: 10%; left: 13.3036%; top: 2.0252%;">
   <h1>Kepatuhan &amp; Manajemen Resiko</h1>    
 </div>
-<div class="moveabl" style="width: 67.4993%; height: 12.853%; left: 13.296%; top: 14.2595%;">
+<div class="moveabl" id="desc" style="width: 67.4993%; height: 12.853%; left: 13.296%; top: 14.2595%;">
 <p>Karyawan wajib mematuhi Peraturan Internal BTPN, Peraturan Bank Indonesia, dan peraturan perundang-undangan lainnya yang berlaku. Karyawan juga harus menyadari dan mengelola risiko di area yang menjadi tanggung jawabnya (risk  awareness). </p>
 </div>
 
@@ -34,6 +65,12 @@
 
 <script>
   var tl = new TimelineMax(); 
+
+  tl.to('#building', .5, {scale:5}, 'office');
+  tl.from('#office', 1, {opacity:0}, "-=.5");
+
+  tl.from('#title', .5, {opacity:0, top:'20%'});
+  tl.from('#desc', .5, {opacity:0, top:'20%'});
 
   tl.staggerFrom('#aturan-bi, #aturan-btpn, #aturan-dpr', 1, {opacity:0, top:'60%'}, .5);
 
