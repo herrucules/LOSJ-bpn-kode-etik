@@ -1,0 +1,91 @@
+<div style="background:#F7EA92;width:100%;height:100%"></div>
+
+<div class="moveabl" style="width: 80%; height: 10%; left: 13.3036%; top: 2.0252%;">
+  <h1>Menciptakan Lingkungan Kerja yang Kondusif</h1>    
+</div>
+<div id="pernyataan1" class="moveabl" style="left: 6.078%; top: 19.4759%; width: 41.9388%; height: 21.1456%; opacity: 1; background: rgb(239, 129, 35); border-radius: 30px; padding: 2%;">
+ <p style="color:#fff">
+    BTPN memperhatikan, memelihara keselamatan dan kesehatan kerja karyawan sebagaimana diatur dalam Perjanjian Kerja Bersama melalui penerapan prosedur K3 (Keselamatan dan Kesehatan Kerja).
+ </p>
+</div>
+
+<div id="pernyataan2" class="moveabl" style="left: 52.294%; top: 19.4759%; width: 41.9865%; height: 21.156%; opacity: 1; background: rgb(239, 129, 35); border-radius: 30px; padding: 2%;">
+ <p style="color:#fff">
+   Upaya perlindungan kerja ditujukan agar karyawan terhindar dari risiko kerja dan penyakit akibat kerja sehingga tercipta lingkungan kerja yang aman dan kondusif.
+ </p>
+</div> 
+
+<div class="moveabl" id="chair1" style="width: 14.2511%; height: 42.2774%; left: 30.3956%; top: 65.8302%; transform: matrix(-1, 0, 0, 1, 0, 0);">
+  <img src="images/chair.svg" alt="Kursi 1">
+</div>
+
+<div class="moveabl" id="chair2" style="width: 14.0%;height: 42.2774%;left: 52.3956%;top;top: 66.8302%;">
+  <img src="images/chair.svg" alt="Kursi 2">
+</div>
+<div class="moveabl" id="staff1" style="width: 14.2511%; height: 42.2774%; left: 27.3956%; top: 53.8302%;">
+  <img src="images/male-staff-sit.svg" alt="Karyawan 1">
+</div>
+
+<div class="moveabl" id="staff2" style="width: 11.7519%; height: 44.8285%; left: 56.4179%; top: 52.5373%;">
+  <img src="images/female-sit.svg" alt="Karyawan 2">
+</div>
+
+<div class="moveabl" id="desk1" style="width: 34.1533%; height: 39.5465%; left: 11.2919%; top: 60.2772%;">
+  <img src="images/desk4.svg" alt="Meja kantor">
+</div>
+
+<div class="moveabl" id="desk2" style="width: 34.1533%; height: 39.5465%; left: 51.4361%; top: 60.6851%; transform: matrix(-1, 0, 0, 1, 0, 0);">
+  <img src="images/desk4.svg" alt="Meja kantor">
+</div>
+
+<div class="moveabl cling1" style="color: rgb(255, 255, 255); width: 10%; height: 10%; left: 48.537%; top: 80.5448%;">
+  +
+</div>
+<div class="moveabl cling1" style="color: rgb(255, 255, 255); width: 10%; height: 10%; left: 79.1549%; top: 56.1809%;">
+  +
+</div>
+<div class="moveabl cling1" style="color: rgb(255, 255, 255); width: 10%; height: 10%; left: 38.0367%; top: 63.0047%;">
+  +
+</div>
+<div class="moveabl cling1" style="color: rgb(255, 255, 255); width: 10%; height: 10%; left: 6.23342%; top: 66.7554%;">
+  +
+</div>
+
+<div class="moveabl cling2" style="color: rgb(255, 255, 255); width: 10%; height: 10%; left: 4.37044%; top: 65.7909%;">
+  +
+</div>
+<div class="moveabl cling2" style="color: rgb(255, 255, 255); width: 10%; height: 10%; left: 76.6392%; top: 54.328%;">
+  +
+</div>
+
+<div class="moveabl" id="btn-next" style="width: 5.4019%; height: 9.99335%; left: 92.5667%; top: 86.516%;">
+  <a href="#/menciptakan-lingkungan-kerja-kondusif-5" title="Selanjutnya">
+    <img src="images/arrow-right.svg" alt="Next" >    
+  </a>
+</div>
+
+<div id="cursor" class="moveabl" style="width: 5.3125%; height: 9.68696%; left: 91.5741%; top: 89.5534%; opacity: 1;">
+  <a href="#/menciptakan-lingkungan-kerja-kondusif-5">
+    <img src="images/handcursor.png" alt="click">
+  </a>
+</div>
+
+<style>
+.cling1 {font-size:280%;text-align: center;}
+.cling2 {font-size:170%;text-align: center;}
+</style>
+
+<script>
+  var tl = new TimelineMax(); 
+  
+  tl.from('#staff1, #chair1, #chair2, #staff2', 1, {opacity:0, left:'50%'});
+
+  tl.from('#pernyataan1', .5, {opacity:0, top:'40%'}, '2');
+  tl.from('#pernyataan2', .5, {opacity:0, top:'40%'}, '+=3');
+
+  TweenMax.staggerFrom($('.cling1, .cling2'), 1, {repeat:-1, rotation:359, opacity:0, scale:0, yoyo:true}, .5);
+
+  tl.from('#btn-next', 1, {scale:0, ease:Bounce.easeOut}, '+=3');
+  tl.from('#cursor', 1, {opacity:0, left:'30%', top:'30%'}, '+=3');
+
+</script>

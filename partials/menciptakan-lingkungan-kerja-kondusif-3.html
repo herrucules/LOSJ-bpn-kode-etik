@@ -39,11 +39,17 @@ BTPN mengutamakan keamanan dan keselamatan di lingkungan kerja, yang harus diduk
 </div>
 
 
-<!-- <div id="cursor" class="moveabl" style="width: 5.3125%; height: 9.68696%; left: 67.993%; top: 73.2791%; opacity: 1;">
-  <a href="#/misconduct">
+<div class="moveabl" id="btn-next" style="width: 5.4019%; height: 9.99335%; left: 92.5667%; top: 86.516%;">
+  <a href="#/menciptakan-lingkungan-kerja-kondusif-4" title="Selanjutnya">
+    <img src="images/arrow-right.svg" alt="Next" >    
+  </a>
+</div>
+
+<div id="cursor" class="moveabl" style="width: 5.3125%; height: 9.68696%; left: 91.5741%; top: 89.5534%; opacity: 1;">
+  <a href="#/menciptakan-lingkungan-kerja-kondusif-4">
     <img src="images/handcursor.png" alt="click">
   </a>
-</div> -->
+</div>
 
 <script>
   var tl = new TimelineMax(); 
@@ -59,6 +65,7 @@ BTPN mengutamakan keamanan dan keselamatan di lingkungan kerja, yang harus diduk
   tl.from('#coach', .5, {left:'100%'}, "+=2");
   tl.from('#jawaban', .5, {opacity:0, top:'50%'});
 
-  // tl.from('#cursor', 1, {opacity:0, left:'30%', top:'30%'}, '+=3');
+  tl.from('#btn-next', 1, {scale:0, ease:Bounce.easeOut}, '+=3');
+  tl.from('#cursor', 1, {opacity:0, left:'30%', top:'30%'}, '+=3');
 
 </script>
