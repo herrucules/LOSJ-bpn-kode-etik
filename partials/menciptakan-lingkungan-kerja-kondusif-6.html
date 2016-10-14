@@ -108,9 +108,9 @@ Karyawan dalam kapasitasnya sebagai individu dapat berpartisipasi sebagai anggot
   TweenMax.from('.tire', .5, {rotation:359.9, transformOrigin:"center center", repeat:90, ease:Linear.easeNone});
   TweenMax.staggerFrom($('.partisan'), .5, {rotation:10, transformOrigin:"center bottom", yoyo:true, repeat:60, repeatDelay:2}, 1);
 
-  tl.from('#pertanyaan', .5, {left:'100%',opacity:0});
+  tl.from('#pertanyaan', .5, {left:'100%',opacity:0}, "+=6");
 
-  tl.from('#coach', .5, {left:'-30%'}, "4");
+  tl.from('#coach', .5, {left:'-30%'}, "+=4");
   tl.from('#jawaban', .5, {opacity:0, top:'50%'});
 
   tl.from('#btn-next', 1, {scale:0, ease:Bounce.easeOut}, '+=4');
