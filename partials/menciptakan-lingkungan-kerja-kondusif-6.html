@@ -60,6 +60,11 @@ Karyawan dalam kapasitasnya sebagai individu dapat berpartisipasi sebagai anggot
   </div>  
 </div>
 
+<div class="moveabl" id="btn-pertanyaan" style="cursor: pointer; width: 5.20983%; height: 9.0031%; left: 73.7756%; top: 62.535%; border-radius: 50%; background: rgb(239, 129, 35); text-align: center; padding-top: 1.3%;" title="Apakah boleh?" style="color:#fff;text-decoration:none">
+    ?
+  </a>
+</div>
+
 <div id="pertanyaan" class="moveabl" style="left: 51.8116%;top: 60.7861%;width: 27.3971%;height: 21.0318%;opacity: 1;background: rgb(239, 129, 35);border-radius: 30px;padding: 2%;">
  <p style="color:#fff">
     Saya di ajak oleh tetangga saya untuk menjadi aktivis Partai Politik, Apakah BTPN memperkenankan hal tersebut?
@@ -98,9 +103,12 @@ Karyawan dalam kapasitasnya sebagai individu dapat berpartisipasi sebagai anggot
 <script>
   var tl = new TimelineMax();   
 
+  tl.set('#pertanyaan, #coach, #jawaban, #btn-next, #cursor', {display:'none'});
+
   tl.from('#border1', .5, {opacity:0, left:'-50%'});
   tl.from('#title', .5, {opacity:0});
   tl.from('#text1', .5, {opacity:0});
+  tl.from('#btn-pertanyaan', .5, {opacity:0, left:'95%'});
 
   TweenMax.fromTo('#truck', 15, {left:'-80%'}, {left:'160%', repeat:2});
   TweenMax.from('#hand', .5, {transformOrigin:"right bottom", repeat:90, yoyo:true, rotation:20});
@@ -108,12 +116,17 @@ Karyawan dalam kapasitasnya sebagai individu dapat berpartisipasi sebagai anggot
   TweenMax.from('.tire', .5, {rotation:359.9, transformOrigin:"center center", repeat:90, ease:Linear.easeNone});
   TweenMax.staggerFrom($('.partisan'), .5, {rotation:10, transformOrigin:"center bottom", yoyo:true, repeat:60, repeatDelay:2}, 1);
 
-  tl.from('#pertanyaan', .5, {left:'100%',opacity:0}, "+=6");
+  $('#btn-pertanyaan').click(function() { 
+    var tl = new TimelineMax(); 
+    tl.set('#pertanyaan, #coach, #jawaban, #btn-next,#cursor', {display:'block'});
 
-  tl.from('#coach', .5, {left:'-30%'}, "+=4");
-  tl.from('#jawaban', .5, {opacity:0, top:'50%'});
+    tl.from('#pertanyaan', .5, {left:'100%',opacity:0});
 
-  tl.from('#btn-next', 1, {scale:0, ease:Bounce.easeOut}, '+=4');
-  tl.from('#cursor', 1, {opacity:0, left:'30%', top:'30%'}, '+=3');
+    tl.from('#coach', .5, {left:'-30%'}, "+=4");
+    tl.from('#jawaban', .5, {opacity:0, top:'50%'});
+
+    tl.from('#btn-next', 1, {scale:0, ease:Bounce.easeOut}, '+=4');
+    tl.from('#cursor', 1, {opacity:0, left:'30%', top:'30%'}, '+=3');
+  });
 
 </script>

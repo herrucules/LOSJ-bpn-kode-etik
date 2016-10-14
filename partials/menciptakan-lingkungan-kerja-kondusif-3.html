@@ -13,6 +13,12 @@ BTPN mengutamakan keamanan dan keselamatan di lingkungan kerja, yang harus diduk
 
  </p>
 </div>
+
+<div class="moveabl" id="btn-pertanyaan" style="cursor: pointer; width: 5.20983%; height: 9.0031%; left: 28.5564%; top: 53.6056%; border-radius: 50%; background: rgb(239, 129, 35); text-align: center; padding-top: 1.3%;" title="Apakah boleh?" style="color:#fff;text-decoration:none">
+    ?
+  </a>
+</div>
+
 <div id="pertanyaan" class="moveabl" style="left: 28.1068%; top: 53.2979%; width: 22.8427%; height: 18.0674%; opacity: 1; background: rgb(239, 129, 35); border-radius: 30px; padding: 2%;">
  <p style="color:#fff">
     Bolehkah saya ijin tidak masuk kerja ketika saya merasa tubuh saya sakit?
@@ -53,19 +59,26 @@ BTPN mengutamakan keamanan dan keselamatan di lingkungan kerja, yang harus diduk
 
 <script>
   var tl = new TimelineMax(); 
-  
+  tl.set('#pertanyaan, #coach, #jawaban, #btn-next, #cursor', {display:'none'});
 
   tl.from('#border1', .5, {opacity:0, left:'-50%'});
   tl.from('#title', .5, {opacity:0});
   tl.from('#text1', .5, {opacity:0});
 
   tl.from('#sakit', 1, {top:'-30%', ease:Bounce.easeOut});
-  tl.from('#pertanyaan', .5, {left:'10%',opacity:0});
+  tl.from('#btn-pertanyaan', .5, {top:'80%', opacity:0});
 
-  tl.from('#coach', .5, {left:'100%'}, "+=2");
-  tl.from('#jawaban', .5, {opacity:0, top:'50%'});
+  $('#btn-pertanyaan').click(function() { 
+    var tl = new TimelineMax();
 
-  tl.from('#btn-next', 1, {scale:0, ease:Bounce.easeOut}, '+=3');
-  tl.from('#cursor', 1, {opacity:0, left:'30%', top:'30%'}, '+=3');
+    tl.set('#pertanyaan, #coach, #jawaban, #btn-next,#cursor', {display:'block'});
+    tl.from('#pertanyaan', .5, {left:'10%',opacity:0});
+
+    tl.from('#coach', .5, {left:'100%'}, "+=2");
+    tl.from('#jawaban', .5, {opacity:0, top:'50%'});
+
+    tl.from('#btn-next', 1, {scale:0, ease:Bounce.easeOut}, '+=3');
+    tl.from('#cursor', 1, {opacity:0, left:'30%', top:'30%'}, '+=3');
+  });
 
 </script>
