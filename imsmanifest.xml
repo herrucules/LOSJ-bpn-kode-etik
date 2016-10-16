@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is a Reload version 2.5.6 SCORM 1.2 Content Package document-->
+<!--Spawned from the Reload Content Package Generator - http://www.reload.ac.uk-->
+<manifest xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" identifier="MANIFEST-FA430E63E5344F56F7453A39F0B8D8FC" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="ORG-63D258484F37B399DEA73A2F407F8AC2">
+    <organization identifier="ORG-63D258484F37B399DEA73A2F407F8AC2" structure="hierarchical">
+      <title>Kode Etik BTPN</title>
+      <item identifier="ITEM-5A9B783075D38769D8952316775B565E" isvisible="true" identifierref="RES-46FA28EEB3A71097462874003B409F61">
+        <title>Digital Content</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-46FA28EEB3A71097462874003B409F61" type="webcontent" href="index.html" adlcp:scormtype="sco">
+      <file href="index.html" />
+      <file href="css/normalize.min.css" />
+      <file href="css/style.css" />
+      <file href="images/btpn-logo.svg" />
+      <file href="images/loading-ring-alt.svg" />
+      <file href="js/app.js" />
+      <file href="js/libs/flowtype.js" />
+      <file href="js/libs/interact.min.js" />
+      <file href="js/libs/jquery.min.js" />
+      <file href="js/libs/preloadjs-0.6.2.min.js" />
+      <file href="js/libs/sammy0.7.6.min.js" />
+      <file href="js/libs/SCORM_API_wrapper.js" />
+      <file href="js/libs/screenfull.min.js" />
+      <file href="js/libs/snap.svg-min.js" />
+      <file href="js/libs/TabWindowVisibilityManager.min.js" />
+      <file href="js/libs/TweenMax.min.js" />
+    </resource>
+  </resources>
+</manifest>
+

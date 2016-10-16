@@ -51,6 +51,10 @@ Karyawan dalam kapasitasnya sebagai individu dapat berpartisipasi sebagai anggot
     <img src="images/truck.svg" alt="Truk kampanye">
   </div>
 
+  <div class="moveabl" style="width: 28.2942%; height: 13.0319%; left: 27.8586%; top: 54.0321%;">
+    <p style="text-align:center;color:#fff;font-size:150%">PARTAI</p>
+  </div>
+
   <div class="moveabl tire  " id="tire1" style="width: 16.6029%; height: 22.5337%; left: 13.3949%; top: 68.6264%; ">
     <img src="images/tire.svg" alt="Ban Truk">
   </div>
@@ -60,7 +64,8 @@ Karyawan dalam kapasitasnya sebagai individu dapat berpartisipasi sebagai anggot
   </div>  
 </div>
 
-<div class="moveabl" id="btn-pertanyaan" style="cursor: pointer; width: 5.20983%; height: 9.0031%; left: 73.7756%; top: 62.535%; border-radius: 50%; background: rgb(239, 129, 35); text-align: center; padding-top: 1.3%;" title="Apakah boleh?" style="color:#fff;text-decoration:none">
+<div class="moveabl" id="btn-pertanyaan" style="cursor: pointer; width: 5.20983%; height: 9.0031%; left: 73.7756%; top: 62.535%; border-radius: 50%; background: rgb(239, 129, 35); text-align: center; padding-top: 1.3%;">
+  <a title="Apakah boleh?" style="color:#fff;text-decoration:none">
     ?
   </a>
 </div>
@@ -89,13 +94,13 @@ Karyawan dalam kapasitasnya sebagai individu dapat berpartisipasi sebagai anggot
 </div>
 
 <div class="moveabl" id="btn-next" style="width: 5.4019%; height: 9.99335%; left: 92.5667%; top: 86.516%;">
-  <a href="#/menciptakan-lingkungan-kerja-kondusif-" title="Selanjutnya">
+  <a href="#/menciptakan-lingkungan-kerja-kondusif-7" title="Selanjutnya">
     <img src="images/arrow-right.svg" alt="Next" >    
   </a>
 </div>
 
 <div id="cursor" class="moveabl" style="width: 5.3125%; height: 9.68696%; left: 91.5741%; top: 89.5534%; opacity: 1;">
-  <a href="#/menciptakan-lingkungan-kerja-kondusif-4">
+  <a href="#/menciptakan-lingkungan-kerja-kondusif-7">
     <img src="images/handcursor.png" alt="click">
   </a>
 </div>
@@ -129,4 +134,7 @@ Karyawan dalam kapasitasnya sebagai individu dapat berpartisipasi sebagai anggot
     tl.from('#cursor', 1, {opacity:0, left:'30%', top:'30%'}, '+=3');
   });
 
+  // test
+  pipwerks.SCORM.data.set("cmi.core.lesson_status", "completed");
+  pipwerks.SCORM.data.save();
 </script>

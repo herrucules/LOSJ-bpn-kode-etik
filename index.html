@@ -7,6 +7,7 @@
   <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700' rel='stylesheet' type='text/css'> -->
   <link rel="stylesheet" href="css/style.css">
   <!-- <script src="https://code.createjs.com/soundjs-0.6.2.min.js"></script> -->
+  <script src="js/libs/SCORM_API_wrapper.js"></script>
   <script src="js/libs/preloadjs-0.6.2.min.js"></script>
   <script src="js/libs/interact.min.js"></script>
   <script src="js/libs/jquery.min.js"></script>
@@ -16,7 +17,7 @@
   <script src="js/libs/sammy0.7.6.min.js"></script>
   <script src="js/libs/flowtype.js"></script>
 </head>
-<body>
+<body onunload="OnUnload()" onbeforeunload="OnUnload()">
   <div >
     <div id="interactive-container" style="margin:0 auto">
       <div id="logo" class="moveabl" style="width: 9.32722%; height: 9.25118%; z-index: 1; left: 1.91995%; top: 3.24882%;">
@@ -46,7 +47,8 @@
                   {id:'13', name:'menciptakan-lingkungan-kerja-kondusif-3', url:'/menciptakan-lingkungan-kerja-kondusif-3', templateUrl:'partials/menciptakan-lingkungan-kerja-kondusif-3.html', tracked: 10},
                   {id:'14', name:'menciptakan-lingkungan-kerja-kondusif-4', url:'/menciptakan-lingkungan-kerja-kondusif-4', templateUrl:'partials/menciptakan-lingkungan-kerja-kondusif-4.html', tracked: 10},
                   {id:'15', name:'menciptakan-lingkungan-kerja-kondusif-5', url:'/menciptakan-lingkungan-kerja-kondusif-5', templateUrl:'partials/menciptakan-lingkungan-kerja-kondusif-5.html', tracked: 10},
-                  {id:'16', name:'menciptakan-lingkungan-kerja-kondusif-6', url:'/menciptakan-lingkungan-kerja-kondusif-6', templateUrl:'partials/menciptakan-lingkungan-kerja-kondusif-6.html', tracked: 10}
+                  {id:'16', name:'menciptakan-lingkungan-kerja-kondusif-6', url:'/menciptakan-lingkungan-kerja-kondusif-6', templateUrl:'partials/menciptakan-lingkungan-kerja-kondusif-6.html', tracked: 10},
+                   {id:'17', name:'menciptakan-lingkungan-kerja-kondusif-7', url:'/menciptakan-lingkungan-kerja-kondusif-7', templateUrl:'partials/menciptakan-lingkungan-kerja-kondusif-7.html', tracked: 10}
                  ];
 
 
@@ -116,7 +118,15 @@
     {id:'partisan2', src:'images/partisan2.svg', type: createjs.LoadQueue.IMAGE},
     {id:'partisan3', src:'images/partisan3.svg', type: createjs.LoadQueue.IMAGE},
     {id:'partisan4', src:'images/partisan4.svg', type: createjs.LoadQueue.IMAGE},
-    {id:'partisan4-hand', src:'images/partisan4-hand.svg', type: createjs.LoadQueue.IMAGE}
+    {id:'partisan4-hand', src:'images/partisan4-hand.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'laptop3', src:'images/laptop3.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'pedoman-socmed', src:'images/pedoman-socmed.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'socmed-facebook', src:'images/socmed-facebook.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'socmed-instagram', src:'images/socmed-instagram.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'socmed-twitter', src:'images/socmed-twitter.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'socmed-youtube', src:'images/socmed-youtube.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'socmed-pinterest', src:'images/socmed-pinterest.svg', type: createjs.LoadQueue.IMAGE},
+    {id:'socmed-googleplus', src:'images/socmed-googleplus.svg', type: createjs.LoadQueue.IMAGE}
     // {id:'selectcocktail', src:'images/select-cocktail.svg', type: createjs.LoadQueue.IMAGE},
     // {id:'glass', src:'images/glass.svg', type: createjs.LoadQueue.IMAGE},
     // {id:'img1', src:'images/black-russian.png'},

@@ -4,8 +4,22 @@ var interactiveApp = {
   videoHandle: null,
   quizes: [],
   currentRoute: null,
-  preloadjs: null
+  preloadjs: null,
+  scormLmsConnected: false,
+  scormTimerHandle: null
 };
+
+var unloaded = false;
+function OnUnload()
+{
+   if(unloaded == false)
+   {
+      pipwerks.SCORM.save();
+      pipwerks.SCORM.quit();
+      
+      unloaded = true;
+   }
+}
 
 $(function() {
 
@@ -15,10 +29,11 @@ $(function() {
   $('#content').hide();
 
   function handlePreloadComplete () {
-    console.log('preload complete..');  
+    clog('preload complete..');  
     $('#preloader').hide();
     $('#content').show();
     initRouting();
+    interactiveApp.initSCORM();
   }
 
   if (manifestToLoad == undefined) manifestToLoad = [];
@@ -84,6 +99,8 @@ $(function() {
         _this.get(value.url, function() {   
           // console.log('get: '+value.url);
           $.get(value.templateUrl, function(d) {
+
+            interactiveApp.setSCOLocation(value.url);
 
             interactiveApp.currentRoute = value;
 
@@ -161,6 +178,104 @@ $(function() {
   }
 
 });
+
+interactiveApp.initSCORM = function() {     
+  var self = this;
+  
+  self.scormLmsConnected = pipwerks.SCORM.init();
+
+  //flagLocations("0|0,0|0,0|0~opening_1,tujuan_0,menu_0,pembinaan_0,hubungan-kerja_0,resiko_0,assessment_0~0|0|0|0~0|0");
+  
+  if(self.scormLmsConnected)
+  {       
+    self.scormLessonStatus = pipwerks.SCORM.data.get("cmi.core.lesson_status");
+    
+    if(self.scormLessonStatus == "completed" || self.scormLessonStatus == "passed" || self.scormLessonStatus == "failed"){
+      
+      //Course has already been completed.
+      
+      //_scorm.disconnect();
+      
+    } else {
+      
+      self.scormLessonLocation = pipwerks.SCORM.data.get("cmi.core.lesson_location"); 
+      var href = '#/';
+      if (self.scormLessonLocation != "") {
+        href = '#'+self.scormLessonLocation;
+      }
+      window.location = href;     
+      
+      var rData = pipwerks.SCORM.data.get("cmi.suspend_data");
+      self._scormSuspendData = [];          
+      if(rData != "")
+      {           
+        // flagLocations(rData);
+      }
+                
+      interactiveApp.initSCORMTimer();
+                        
+      if(self.scormLessonStatus == "not attempted" || self.scormLessonStatus == "") 
+        _scormSuccess = pipwerks.SCORM.data.set("cmi.core.lesson_status", "not attempted");
+      else
+        _scormSuccess = pipwerks.SCORM.data.set("cmi.core.lesson_status", "incomplete");
+    }
+    
+  } else {
+    
+    clog("Could not connect to LMS.");
+    
+  }
+  
+};
+
+interactiveApp.setSCOLocation = function (value) {
+  if (!interactiveApp.scormLmsConnected) return;
+
+  pipwerks.SCORM.data.set('cmi.core.lesson_location', value);
+  if(!pipwerks.SCORM.data.save()) {
+    clog("API: data failed to be set");
+  }              
+};
+
+interactiveApp.initSCORMTimer = function () {
+  clearInterval(self.scormTimerHandle);
+  var intervalCount = 0;
+  self.scormTimerHandle = setInterval(function(){   
+
+    clog (pipwerks.SCORM.data.set("cmi.core.session_time",
+      interactiveApp.formatTimeSCORM(++intervalCount)));
+
+    // if(!pipwerks.SCORM.data.save()) {
+    //   clog("API: data failed to be set");
+    // } 
+
+  }, 1000);
+};
+
+interactiveApp.formatTimeSCORM = function(time) {   
+  var strTime = "";
+  var second = time%60;
+  var minute = Math.floor(time/60)%60;
+  var hour = Math.floor(time/3600);
+  
+  if (hour<10) 
+    strTime += "0"+hour+":";      
+  else
+    strTime += hour+":";
+  
+  if (minute<10) 
+    strTime += "0"+minute+":";
+  else
+    strTime += minute+":";
+  
+  if (second<10) 
+    strTime += "0"+second+".00";
+  else
+    strTime += second+".00";
+  
+  // console.log(strTime);
+  return strTime;
+};
 
 interactiveApp.LOProgress = {
   init: function() {
