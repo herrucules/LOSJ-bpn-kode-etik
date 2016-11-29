@@ -14,7 +14,7 @@ BTPN mengutamakan keamanan dan keselamatan di lingkungan kerja, yang harus diduk
  </p>
 </div>
 
-<div class="moveabl" id="btn-pertanyaan" style="cursor: pointer; width: 5.20983%; height: 9.0031%; left: 28.5564%; top: 53.6056%; border-radius: 50%; background: rgb(239, 129, 35); text-align: center; padding-top: 1.3%;">
+<div class="moveabl" id="btn-pertanyaan" style="cursor: pointer; width: 5.20983%; height: 9.0031%; left: 28.5564%; top: 53.6056%; border-radius: 50%; background: rgb(239, 129, 35); text-align: center; padding-top: 1.3%;z-index:1">
   <a title="Apakah boleh?" style="color:#fff;text-decoration:none">
     ?
   </a>
@@ -46,6 +46,7 @@ BTPN mengutamakan keamanan dan keselamatan di lingkungan kerja, yang harus diduk
 </div>
 
 
+
 <div class="moveabl" id="btn-next" style="width: 5.4019%; height: 9.99335%; left: 92.5667%; top: 86.516%;">
   <a href="#/menciptakan-lingkungan-kerja-kondusif-4" title="Selanjutnya">
     <img src="images/arrow-right.svg" alt="Next" >    
@@ -72,6 +73,7 @@ BTPN mengutamakan keamanan dan keselamatan di lingkungan kerja, yang harus diduk
   $('#btn-pertanyaan').click(function() { 
     var tl = new TimelineMax();
 
+    tl.set(this, {display:'none'});
     tl.set('#pertanyaan, #coach, #jawaban, #btn-next,#cursor', {display:'block'});
     tl.from('#pertanyaan', .5, {left:'10%',opacity:0});
 

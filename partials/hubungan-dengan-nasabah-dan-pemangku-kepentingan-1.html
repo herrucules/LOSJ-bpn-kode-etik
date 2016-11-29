@@ -1,0 +1,79 @@
+<div id="office" style="background:#F7EA92;width:100%;height:100%" class="moveabl">
+
+<div id="title" class="moveabl" style="left: 14.0237%; top: 1.88546%; ">
+    <h1 >Hubungan dengan Nasabah dan Pemangku Kepentingan</h1>
+
+</div>
+ 
+<div id="pernyataan" class="moveabl" style="left: 12.355%; top: 11.8094%; width: 80.0786%; height: 26.0656%; opacity: 1; background: rgb(239, 129, 35); border-radius: 30px; padding: 1.5% 2% 2% 1.5%;">
+ 
+<ul>
+  <li style="color:#fff">
+  BTPN berkomitmen untuk memberikan layanan prima kepada nasabah tanpa dipengaruhi oleh jumlah simpanan atau pinjaman nasabah, suku bangsa, agama, warna kulit, jenis kelamin, dan usia.   <br>  <br>
+  </li>
+  <li style="color:#fff">
+  BTPN menyampaikan informasi yang terkini dan mudah diakses kepada nasabah tentang produk dan layanan.    
+  </li>
+</ul>
+</div>
+
+<div id="pernyataan2" class="moveabl" style="left: 5.99054%; top: 82.3224%; width: 89.6024%; height: 17.6394%; opacity: 1; background: rgb(125, 106, 86); border-radius: 30px; padding: 2%; z-index: 1;">
+  <p style="color:#fff">  
+Karyawan wajib melayani nasabah secara profesional dan menawarkan produk dan layanan yang sesuai dengan kebutuhan nasabah, serta wajib menyampaikan setiap perubahan manfaat, biaya, risiko, syarat dan ketentuan yang tercantum dalam dokumen dan/atau perjanjian mengenai produk dan/ atau layanan.
+</p>
+</div>
+
+
+
+  <div id="kursi1" class="moveabl" style="width: 16.5264%; height: 40.5411%; left: 45.2483%; top: 60.4823%;">
+    <img src="images/chair.svg" alt="chair 1">
+  </div>
+
+  <div id="kursi2" class="moveabl" style="width: 16.6466%; height: 41.0189%; left: 82.2733%; top: 60.3629%; transform: matrix(-1, 0, 0, 1, 0, 0);">
+    <img src="images/chair.svg" alt="chair 2">
+  </div>
+
+  <div id="customer1" class="moveabl" style="width: 16.8962%; height: 50.4189%; left: 46.8341%; top: 45.7935%;">
+    <img src="images/staff-sit1.svg" alt="Nasabah 1 dilayani">
+  </div>
+
+  <div id="cso" class="moveabl" style="width: 17.6624%; height: 48.0552%; left: 79.7454%; top: 46.4779%;">
+    <img src="images/coach-sit.svg" alt="CSO BTPN melayani">
+  </div>
+
+  <div id="desk" class="moveabl" style="width: 37.2732%; height: 49.6965%; left: 52.7661%; top: 53.054%;">
+    <img src="images/desk1.svg" alt="desk">
+  </div>
+
+  <div id="customer2" class="moveabl" style="width: 17.0482%; height: 61.4244%; left: 30.3342%; top: 43.2981%;">
+    <img src="images/customer1.svg" alt="Nasabah 2 antri">
+  </div>
+  <div id="customer3" class="moveabl" style="width: 19.8584%; height: 56.1163%; left: 12.065%; top: 44.5233%;">
+    <img src="images/customer2.svg" alt="Nasabah 3 antri">
+  </div>
+  <div id="customer4" class="moveabl" style="width: 13.265%; height: 53.1823%; left: 1.94788%; top: 48.1002%;">
+    <img src="images/customer3.svg" alt="Nasabah 4 antri">
+  </div>
+
+  <div class="moveabl" id="btn-next" style="width: 5.4019%; height: 9.99335%; left: 92.5667%; top: 86.516%;z-index:2">
+  <a href="#/hubungan-dengan-nasabah-dan-pemangku-kepentingan-2" title="Selanjutnya">
+    <img src="images/arrow-right.svg" alt="Next" >    
+  </a>
+</div>
+
+<script>
+  var tl = new TimelineMax(); 
+
+  tl.from('#office', .5, {opacity:0});
+
+  tl.from('#title', .5, {opacity:0});
+
+  tl.staggerFrom('#customer1, #customer2, #customer3, #customer4', .5, {top:'-70%', ease:Bounce.easeOut}, .5);
+
+  tl.from('#pernyataan', .5, {opacity:0});
+
+  tl.from('#pernyataan2', .5, {top:'100%'}, "+=4");
+
+  tl.from('#btn-next', 1, {scale:0, ease:Bounce.easeOut}, '+=2');
+
+  </script>

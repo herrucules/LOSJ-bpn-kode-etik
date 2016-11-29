@@ -1,0 +1,72 @@
+<div id="container-b" class="moveable lock" spellcheck="false" style="width: 100%; height: 100%; background-color: rgb(247, 234, 146);">
+    <div>
+        <br>
+    </div>
+</div>
+<div id="container-c" class="moveable lock" spellcheck="false" style="width: 100%; height: 100%; background-color: rgb(115, 79, 66); top: 0px; opacity: 1;" data-options="">
+    <div>
+        <br>
+    </div>
+</div>
+<div id="container-9" class="moveable el-selected context-menu-active lock" style="left: 14.0237%; top: 1.88546%; width: 78.4969%; height: 12.8696%;" spellcheck="false">
+    <h1 style="color:#fff">Hubungan dengan Nasabah dan Pemangku Kepentingan</h1></div>
+<div id="container-e" class="moveable" style="left: 5.63348%; top: 23.54%; width: 20.1461%; height: 40.1739%; opacity: 1;" data-options="left:20.67%;top:23.54%;index:1;label:container-e;duration:1;ease:Linear;target:container-e;position:container-f">
+    <img src="images/laporan-buruk.svg" alt="laporan-buruk.svg">
+</div>
+<div id="container-f" class="moveable" style="width: 24.8434%; height: 51.3043%; left: 36.0566%; top: 35.2418%; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);" data-options="top:27.68%;scale:0.75;left:61.11%;index:0;label:container-f;duration:1;ease:null;target:container-f">
+    <img src="images/laporan-baik.svg" alt="laporan-baik.svg">
+</div>
+<div id="container-a" class="moveable" style="width: 7.82881%; height: 13.5652%; left: 45.823%; top: 46.356%; transform: matrix(1, 0, 0, 1, 0, 0);" data-options="scale:0;index:4;label:container-a;duration:0.5;ease:null;target:container-a">
+    <img src="images/check.svg" alt="check.svg">
+</div>
+<div id="container-7" class="moveable" style="width: 14.7182%; height: 58.2609%; left: 50.2332%; top: 52.9429%; opacity: 1;" data-options="opacity:1;top:100%;index:3;label:container-7;duration:1.5;ease:Power3.easeOut;target:container-7">
+    <img src="images/hand-with-pen.svg" alt="hand-with-pen.svg">
+    <div id="container-d" class="moveable" style="left: 31.2057%; top: 30.9748%; width: 45.3901%; height: 71.3433%; background-color: rgb(255, 255, 255);" spellcheck="false">
+        <p>
+            <br>
+        </p>
+    </div>
+</div>
+<div id="container-8" class="moveable" style="left: 41.3068%; top: 39.2717%; width: 16.2839%; height: 5.21739%; transform: matrix(1, 0, 0, 1, 0, 0);" spellcheck="false" data-options="scale:0;index:2;label:container-8;duration:1;ease:Elastic.easeOut;target:container-8">
+    <p style="text-align: center;" data-mce-style="text-align: center;"><strong>”Rp. Harga Wajar"</strong></p>
+</div>
+<div class="moveabl" id="btn-next" style="width: 5.4019%; height: 9.99335%; left: 92.5667%; top: 86.516%;z-index:2">
+  <a href="#/hubungan-dengan-nasabah-dan-pemangku-kepentingan-5" title="Selanjutnya">
+    <img src="images/arrow-right.svg" alt="Next" >    
+  </a>
+</div>
+<script>
+var tl = new TimelineMax();
+
+interactiveApp.timeline = tl;
+tl.addLabel('container-f');
+tl.from('#container-f', 1, {
+    top: '27.68%',
+    scale: '0.75',
+    left: '61.11%',
+    ease: 'null'
+}, '+=0');
+tl.addLabel('container-e');
+tl.from('#container-e', 1, {
+    left: '20.67%',
+    top: '23.54%',
+    ease: 'Linear'
+}, 'container-f');
+tl.addLabel('container-8');
+tl.from('#container-8', 1, {
+    scale: '0',
+    ease: 'Elastic.easeOut'
+}, '+=0');
+tl.addLabel('container-7');
+tl.from('#container-7', 1.5, {
+    opacity: '1',
+    top: '100%',
+    ease: 'Power3.easeOut'
+}, '+=0');
+tl.addLabel('container-a');
+tl.from('#container-a', 0.5, {
+    scale: '0',
+    ease: 'null'
+}, '+=0');
+tl.from('#btn-next', 1, {scale:0, ease:Bounce.easeOut}, '+=2');
+</script>

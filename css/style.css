@@ -22,7 +22,7 @@ h5,h6 {
   font-size:0.75em;
 }
 
-p {
+p, li {
   font-size: 0.7em;
   margin-top:0;
 }
@@ -96,9 +96,13 @@ p {
   cursor:pointer;
 }
 
-.moveable {
+#interactive-container .action-resume-animation {
+  cursor: pointer;
+}
+
+/*.moveable {
   border:1px solid blue;
 }
 .selected {
   border-color:red;
-}
+}*/

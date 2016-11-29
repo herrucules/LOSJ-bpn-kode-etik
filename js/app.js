@@ -6,7 +6,8 @@ var interactiveApp = {
   currentRoute: null,
   preloadjs: null,
   scormLmsConnected: false,
-  scormTimerHandle: null
+  scormTimerHandle: null,
+  timeline:null
 };
 
 var unloaded = false;
@@ -176,6 +177,13 @@ $(function() {
     }).run();
 
   }
+
+  $('#interactive-container').on('click', '.action-resume-animation', function () {
+    if (interactiveApp.timeline != null) {
+      interactiveApp.timeline.resume();
+    }
+    $(this).off('click');
+  });
 
 });
 
@@ -356,14 +364,14 @@ $(window).TabWindowVisibilityManager({
     fontRatio : 45
   });  
 
-    interact('#interactive-container .moveable')
-     .draggable({
-        onmove: calcPercentPos
-      })
-     .resizable({
-      edges:{right:true, bottom:true}
-      })
-     .on('resizemove', calcPercentSize);
+    // interact('#interactive-container .moveable')
+    //  .draggable({
+    //     onmove: calcPercentPos
+    //   })
+    //  .resizable({
+    //   edges:{right:true, bottom:true}
+    //   })
+    //  .on('resizemove', calcPercentSize);
 
 var selectedEl = {}, deselect = false;
 $(document).ready(function() {
