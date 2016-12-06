@@ -7,7 +7,9 @@ var interactiveApp = {
   preloadjs: null,
   scormLmsConnected: false,
   scormTimerHandle: null,
-  timeline:null
+  timeline:null,
+  menuBtn: $('#menu-icon'),
+  menuContainer: $('#menu-container'),
 };
 
 var unloaded = false;
@@ -27,12 +29,12 @@ $(function() {
   var preload = new createjs.LoadQueue(false);
   interactiveApp.preloadjs = preload;
   preload.on('complete', handlePreloadComplete);
-  $('#content').hide();
+  $('#content, #nav-next, #nav-prev, #menu-icon, #menu-container').hide();  
 
   function handlePreloadComplete () {
     clog('preload complete..');  
     $('#preloader').hide();
-    $('#content').show();
+    $('#content, #menu-icon, #menu-container').show();
     initRouting();
     interactiveApp.initSCORM();
   }
@@ -103,6 +105,15 @@ $(function() {
 
             interactiveApp.setSCOLocation(value.url);
 
+            var menus = interactiveApp.menuContainer.find('a');
+            $.each(menus, function (i, menu) {
+              menu = $(menu);              
+              menu.routeID = interactiveApp.getRouteID(menu.attr('href'));
+              if (menu.routeID <= parseInt(value.id)) {
+                menu.removeClass();
+              }
+            });
+
             interactiveApp.currentRoute = value;
 
             function setContent() {
@@ -119,10 +130,22 @@ $(function() {
               initQuiz(value.id); 
               executeScript();    
 
-              $('#next-nav, #nav-prev').off('click');
+              $('#nav-next, #nav-prev').off('click');
+
+              if (value.hideNext) {
+                $('#nav-next').hide();
+              } else {
+                $('#nav-next').show();
+              }
+              if (value.hidePrev) {
+                $('#nav-prev').hide();
+              } else {
+                $('#nav-prev').show();
+              }
 
               $('#nav-next').on('click', function(e) {
                 e.stopPropagation();
+                // console.log(index);
                 if (index+1 < interactiveApp.appRoutes.length) {
                   window.location = '#'+interactiveApp.appRoutes[index+1].url;      
                   interactiveApp.playAudio(interactiveApp.appRoutes[index+1].name);
@@ -185,7 +208,49 @@ $(function() {
     $(this).off('click');
   });
 
+  interactiveApp.menuContainer.css('top', '-200%');
+  interactiveApp.menuBtn.on('click', function() {    
+    var menu = interactiveApp.menuContainer;
+    var btn = interactiveApp.menuBtn;
+    if (btn.data('is-open')) {
+      btn.data('is-open', false);
+      TweenLite.to(menu, 2, {top: '-200%', ease:Expo.easeOut});      
+    } else {
+      clog('open dong..')
+      btn.data('is-open', true);
+      TweenLite.to(menu, .5, {top: 0, ease:Expo.easeOut});      
+    }
+
+    var icon = btn.children('img');
+    var tmp = icon.data('alt-img');
+    icon.data('alt-img', icon.attr('src'));
+    icon.attr('src', tmp);
+  });
+  interactiveApp.menuContainer.on('click', 'a', function (e) {    
+    e.stopPropagation();
+    var $this = $(this);
+    console.log($this.hasClass('disabled'));
+    if ($this.hasClass('disabled')) 
+      return false;
+    
+    interactiveApp.linkChange( $this.attr('href') );    
+  });
+
 });
+
+interactiveApp.linkChange = function (href) {
+  window.location = href;                  
+  href = href.substring(1);
+  for (var i=0; i<interactiveApp.appRoutes.length; i++) {
+    var route = interactiveApp.appRoutes[i];
+    if (href == route.url) {
+      if (route.audioURL) {
+        interactiveApp.playAudio(route.name);
+      }
+      break;
+    }
+  }
+};
 
 interactiveApp.initSCORM = function() {     
   var self = this;
@@ -307,6 +372,15 @@ interactiveApp.playAudio = function (id) {
   if (interactiveApp.audioHandles[id]) {
     interactiveApp.audioHandles[id] = createjs.Sound.play(id);
   }
+};
+
+interactiveApp.getRouteID = function (url) {  
+  for (var i=0; i<appRoutes.length; i++) {
+    if ('#'+appRoutes[i].url == url) {
+      return parseInt(appRoutes[i].id);
+    }
+  }
+  return false;
 };
 
 $(window).TabWindowVisibilityManager({

@@ -23,21 +23,40 @@
       <div id="logo" class="moveabl" style="width: 9.32722%; height: 9.25118%; z-index: 1; left: 1.91995%; top: 3.24882%;">
         <a href="#/"><img src="images/btpn-logo.svg" alt="BTPN"></a>
       </div>
+      <div id="menu-icon" class="" style="width: 4.48718%; height: 7.22155%; z-index: 2; left: 92.1575%; top: 4.48384%;">
+        <img src="images/menuicon.svg" data-alt-img="images/close.svg" alt="Open menu">
+      </div>
+      <div id="menu-container" class="moveabl" style="width: 30%; background-color: #fff; box-shadow:rgb(239, 129, 35) 0px 0px 20px -3px; left:70%;z-index:1">   
+        <ul>
+          <li><a class="disabled" href="#/learning-objectives">Tujuan Pembelajaran</a></li>
+          <li><a class="disabled" href="#/principals">Prinsip-prinsip Moral</a></li>
+          <li><a class="disabled" href="#/kepatuhan-dan-manajemen-resiko">Kepatuhan &amp; Manajemen Resiko</a></li>
+          <li><a class="disabled" href="#/benturan-kepentingan">Benturan Kepentingan</a></li>
+          <li><a class="disabled" href="#/menciptakan-lingkungan-kerja-kondusif">Menciptakan Lingkungan Kerja yang Kondusif</a></li>
+          <li><a class="disabled" href="#/pengelolaan-dan-pengamanan-informasi-1">Pengelolaan &amp; Pengamanan Informasi</a></li>
+          <li><a class="disabled" href="#/hubungan-dengan-nasabah-dan-pemangku-kepentingan-1">Hubungan dengan Nasabah &amp; Pemangku Kepentingan</a></li>
+          <li><a class="disabled" href="#/penegakan-kode-etik">Penegakan Kode Etik</a></li>
+        </ul>     
+      </div>
       <div id="preloader" style="z-index: 1; left: 43.8311%; top: 41.763%; width: 8.25103%; height: 16.56%;" class="moveabl">
         <img src="images/loading-ring-alt.svg" alt="Loading..">
       </div>
       <div id="content"></div>
+      <div id="nav">
+        <a href="" title="Selanjutnya" rel="next" id="nav-next"></a>
+        <a href="" title="Sebelumnya" rel="previous" id="nav-prev"></a>        
+      </div>
     </div>
   </div>
 
   <script>
   var appRoutes = [ 
-                  {id:'1', name:'title', url:'/', templateUrl:'partials/title.html'},
+                  {id:'1', name:'title', url:'/', templateUrl:'partials/title.html', hidePrev:true},
                   {id:'2', name:'learning-objectives', url:'/learning-objectives', templateUrl:'partials/learning-objectives.html', tracked: 10},
                   {id:'3', name:'principals', url:'/principals', templateUrl:'partials/principals.html', tracked: 10},
                   {id:'4', name:'values', url:'/values', templateUrl:'partials/values.html', tracked: 10},
-                  {id:'5', name:'speak-your-mind', url:'/speak-your-mind', templateUrl:'partials/speak-your-mind.html', tracked: 10},
-                  {id:'6', name:'misconduct', url:'/misconduct', templateUrl:'partials/misconduct.html', tracked: 10},
+                  // {id:'5', name:'speak-your-mind', url:'/speak-your-mind', templateUrl:'partials/speak-your-mind.html', tracked: 10},
+                  // {id:'6', name:'misconduct', url:'/misconduct', templateUrl:'partials/misconduct.html', tracked: 10},
                   {id:'7', name:'kepatuhan-dan-manajemen-resiko', url:'/kepatuhan-dan-manajemen-resiko', templateUrl:'partials/kepatuhan-dan-manajemen-resiko.html', tracked: 10},
                   {id:'8', name:'contoh-kepatuhan-dan-manajemen-resiko', url:'/contoh-kepatuhan-dan-manajemen-resiko', templateUrl:'partials/contoh-kepatuhan-dan-manajemen-resiko.html', tracked: 10},
                   {id:'9', name:'benturan-kepentingan', url:'/benturan-kepentingan', templateUrl:'partials/benturan-kepentingan.html', tracked: 10},
@@ -63,7 +82,7 @@
                    {id:'30', name:'penegakan-kode-etik-staff', url:'/penegakan-kode-etik-staff', templateUrl:'partials/penegakan-kode-etik-staff.html', tracked: 10},
                    {id:'31', name:'penegakan-kode-etik-manager', url:'/penegakan-kode-etik-manager', templateUrl:'partials/penegakan-kode-etik-manager.html', tracked: 10},
                    {id:'32', name:'pelanggaran-kode-etik', url:'/pelanggaran-kode-etik', templateUrl:'partials/pelanggaran-kode-etik.html', tracked: 10},
-                   {id:'33', name:'finish', url:'/finish', templateUrl:'partials/finish.html', tracked: 10}
+                   {id:'33', name:'finish', url:'/finish', templateUrl:'partials/finish.html', tracked: 10, hideNext: true}
                  ];
 
 

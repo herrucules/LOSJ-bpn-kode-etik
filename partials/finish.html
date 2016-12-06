@@ -35,8 +35,8 @@
 <div id="container-c" class="moveable" style="left: 51.5331%; top: 63.7402%; width: 13.1661%; height: 50.1305%; opacity: 1;" data-options="opacity:0;top:100%;index:3;label:staff-wave;duration:0.5;target:container-c;predefined:Fly in from bottom;position:2">
     <img src="images/female-staff-hi.svg" alt="female-staff-hi.svg">
 </div>
-<a href="#/" style="text-decoration:none">
-<div id="container-b" class="moveable" style="left: 91.9818%; top: 86.5984%; width: 5.32915%; height: 9.92167%; transform: matrix(1, 0, 0, 1, 0, 0);" data-options="scale:0;index:6;label:ulang;duration:0.5;target:container-b;predefined:Zoom in">
+<!-- <a href="#/" style="text-decoration:none">
+<div id="container-b" class="moveable" style="left: 91.9818%; top: 85.2%; width: 5.32915%; height: 9.92167%; transform: matrix(1, 0, 0, 1, 0, 0);" data-options="scale:0;index:6;label:ulang;duration:0.5;target:container-b;predefined:Zoom in">
     <img src="images/arrow-right.svg" alt="arrow-right.svg">
 </div>
 <div id="container-e" class="moveable" spellcheck="false" style="width: 5.64263%; height: 4.69974%; left: 91.8299%; top: 81.866%; opacity: 1;" data-options="opacity:0;index:7;label:container-e;duration:0.5;target:container-e;predefined:Fade in;position:4">
@@ -45,7 +45,7 @@
         <br>
     </p>
 </div>
-</a>
+</a> -->
 <script>
 var tl = new TimelineMax();
 
@@ -65,5 +65,8 @@ tl.from('#container-a', 1, {opacity:'0'}, '+=0');
 tl.addLabel('ulang');
 tl.from('#container-b', 0.5, {scale:'0'}, '+=0');
 tl.addLabel('container-e');
-tl.from('#container-e', 0.5, {opacity:'0'}, '4');
+// tl.from('#container-e', 0.5, {opacity:'0'}, '4');
+
+  pipwerks.SCORM.data.set("cmi.core.lesson_status", "completed");
+  pipwerks.SCORM.data.save();
 </script>
