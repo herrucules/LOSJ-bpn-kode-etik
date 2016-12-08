@@ -48,6 +48,7 @@
 </div> -->
 
 <script>
+  $('#nav-next').show();
   var tl = new TimelineMax();  
   tl.from('#building', .5, {top:'36.5271%'});
   tl.from('#building', .5, {left:'41.4443%'});
@@ -58,5 +59,6 @@
     {left: '41.5981%', top: '16.4722%'}
     ]}});
   tl.from('#cursor', 1, {opacity:0, left:'30%', top:'60%'}, '+=1');
+    tl.from('#nav-next', 1, {scale:0, ease:Bounce.easeOut}, '+=3');
 
 </script>

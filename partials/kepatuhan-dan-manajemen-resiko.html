@@ -64,6 +64,7 @@
 
 
 <script>
+$('#nav-next').show();
   var tl = new TimelineMax(); 
 
   tl.to('#building', .5, {scale:5}, 'office');
@@ -74,6 +75,7 @@
 
   tl.staggerFrom('#aturan-bi, #aturan-btpn, #aturan-dpr', 1, {opacity:0, top:'60%'}, .5);
 
+    tl.from('#nav-next', 1, {scale:0, ease:Bounce.easeOut}, '+=3');
 
   // tl.from('#btn-next', 1, {scale:0, ease:Bounce.easeOut});
   // tl.from('#cursor', 1, {opacity:0, left:'30%', top:'30%'}, '+=2');

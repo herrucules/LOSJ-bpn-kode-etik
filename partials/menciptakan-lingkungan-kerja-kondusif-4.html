@@ -76,6 +76,7 @@
 </style>
 
 <script>
+  $('#nav-next').show();
   var tl = new TimelineMax(); 
   
   tl.from('#staff1, #chair1, #chair2, #staff2', 1, {opacity:0, left:'50%'});
@@ -87,5 +88,6 @@
 
   // tl.from('#btn-next', 1, {scale:0, ease:Bounce.easeOut}, '+=3');
   // tl.from('#cursor', 1, {opacity:0, left:'30%', top:'30%'}, '+=3');
+    tl.from('#nav-next', 1, {scale:0, ease:Bounce.easeOut}, '+=3');
 
 </script>

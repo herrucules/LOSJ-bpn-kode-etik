@@ -131,7 +131,7 @@ $(function() {
               executeScript();    
 
               $('#nav-next, #nav-prev').off('click');
-
+              // value.hideNext = true;
               if (value.hideNext) {
                 $('#nav-next').hide();
               } else {

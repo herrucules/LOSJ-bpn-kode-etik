@@ -74,6 +74,7 @@
 
 <script>
   TweenLite.set('#staff-female', {scaleX:-1});
+  $('#nav-next').show();
 
   var tl = new TimelineMax();  
   tl.from('#building', 1, {left:'18.0851%'} );  
@@ -99,5 +100,7 @@
   tl.from('#val4', .5, {opacity:0});
 
   tl.from('#cursor', 1, {opacity:0, left:'30%', top:'30%'}, '+=3');
+
+    tl.from('#nav-next', 1, {scale:0, ease:Bounce.easeOut}, '+=3');
 
 </script>

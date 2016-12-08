@@ -76,6 +76,7 @@ BTPN berkomitmen untuk memberikan kesempatan yang sama kepada semua karyawan dal
 </div>
 
 <script>
+  $('#nav-next').show();
   var tl = new TimelineMax(); 
   
   tl.from('#staff-male2, #shadow4', 1.5, {left:'-20%'}, 'walking');
@@ -93,4 +94,5 @@ BTPN berkomitmen untuk memberikan kesempatan yang sama kepada semua karyawan dal
 
   tl.from('#cursor', 1, {opacity:0, left:'30%', top:'30%'}, '+=3');
 
+    tl.from('#nav-next', 1, {scale:0, ease:Bounce.easeOut}, '+=3');
 </script>

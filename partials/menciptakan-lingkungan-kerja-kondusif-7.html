@@ -89,6 +89,8 @@ Penggunaan media sosial yang kurang hati-hati juga dapat menimbulkan risiko terh
 </div> -->
 
 <script>
+    $('#nav-next').show();
+    TweenLite.set('#nav-next', {scale:0});
   var tl = new TimelineMax(); 
   tl.set('#pertanyaan, #jawaban, #btn-pertanyaan2, #pertanyaan2, #jawaban2, #btn-next, #cursor', {display:'none'});
 
@@ -121,6 +123,7 @@ Penggunaan media sosial yang kurang hati-hati juga dapat menimbulkan risiko terh
 
     // tl.from('#btn-next', 1, {scale:0, ease:Bounce.easeOut}, '+=3');
     // tl.from('#cursor', 1, {opacity:0, left:'30%', top:'30%'}, '+=3');
+    tl.to('#nav-next', 1, {scale:1, ease:Bounce.easeOut}, '+=3');
   });
 
 </script>

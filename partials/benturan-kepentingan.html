@@ -74,6 +74,8 @@
 
   // tl.from('#btn-next', 1, {scale:0, ease:Bounce.easeOut});
   // tl.from('#cursor', 1, {opacity:0, left:'30%', top:'30%'}, '+=2');
+  $('#nav-next').show();
+    tl.from('#nav-next', 1, {scale:0, ease:Bounce.easeOut}, '+=3');
 
   var sleeptl = new TimelineMax({repeat:-1});
   sleeptl.from('#z1', .5, {opacity:0}, "2");

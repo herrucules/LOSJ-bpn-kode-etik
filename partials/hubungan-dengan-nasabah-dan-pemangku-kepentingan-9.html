@@ -60,6 +60,7 @@
   </a>
 </div> -->
 <script>
+$('#nav-next').show();
 var tl = new TimelineMax();
 
 interactiveApp.timeline = tl;
@@ -105,5 +106,7 @@ tl.addLabel('nolak');
 tl.from('#container-j', 1, {
     opacity: '0'
 }, 'wrong');
+
+    tl.from('#nav-next', 1, {scale:0, ease:Bounce.easeOut}, '+=3');
 // tl.from('#btn-next', 1, {scale:0, ease:Bounce.easeOut}, '+=2');
 </script>

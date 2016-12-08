@@ -101,6 +101,8 @@ BTPN tidak mentolerir (zero tolerance) segala tindakan diskriminasi dan peleceha
 
 <script>
 
+    $('#nav-next').show();
+    TweenLite.set('#nav-next', {scale:0});
   var tl = new TimelineMax(); 
   
   tl.set('#coach, #pertanyaan, #jawaban, #cursor, #btn-next', {display:'none'});
@@ -125,6 +127,7 @@ BTPN tidak mentolerir (zero tolerance) segala tindakan diskriminasi dan peleceha
 
     // tl.from('#btn-next', 1, {scale:0, ease:Bounce.easeOut});
     // tl.from('#cursor', 1, {opacity:0, left:'30%', top:'30%'}, '+=3');
+    tl.to('#nav-next', 1, {scale:1, ease:Bounce.easeOut}, '+=3');
   });
 
 

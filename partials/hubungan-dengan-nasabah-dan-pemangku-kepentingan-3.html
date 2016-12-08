@@ -72,6 +72,7 @@
 
 
 <script>
+$('#nav-next').show();
 var tl = new TimelineMax();
 
 interactiveApp.timeline = tl;
@@ -153,4 +154,5 @@ tl.from('#container-z', 0.5, {
     top: '90%',
     ease: 'null'
 }, '+=3');
+    // tl.from('#nav-next', 1, {scale:0, ease:Bounce.easeOut}, '+=3');
 </script>

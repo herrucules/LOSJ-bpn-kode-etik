@@ -36,6 +36,7 @@
   </a>
 </div> -->
 <script>
+$('#nav-next').show();
 var tl = new TimelineMax();
 
 interactiveApp.timeline = tl;
@@ -68,5 +69,6 @@ tl.from('#container-a', 0.5, {
     scale: '0',
     ease: 'null'
 }, '+=0');
+    tl.from('#nav-next', 1, {scale:0, ease:Bounce.easeOut}, '+=3');
 // tl.from('#btn-next', 1, {scale:0, ease:Bounce.easeOut}, '+=2');
 </script>

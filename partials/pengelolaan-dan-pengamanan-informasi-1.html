@@ -87,6 +87,8 @@ Setiap Karyawan bertanggung jawab menjaga kerahasiaan Informasi sesuai ketentuan
 
 
 <script>
+  $('#nav-next').show();
+  TweenLite.set('#nav-next', {scale:0});
   var tl = new TimelineMax(); 
 
   tl.set('#pertanyaan, #btn-next, #coach, #coach2, #jawaban2, #jawaban1, #cursor2', {display:'none'});
@@ -136,6 +138,7 @@ Setiap Karyawan bertanggung jawab menjaga kerahasiaan Informasi sesuai ketentuan
     tl.from('#jawaban2', .5, {opacity:0, left:'80%'});
 
     // tl.from('#btn-next', 1, {scale:0, ease:Bounce.easeOut}, '+=3');
+    tl.to('#nav-next', 1, {scale:1, ease:Bounce.easeOut}, '+=3');
 
   });
 
